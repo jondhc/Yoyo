@@ -17,6 +17,8 @@ public class LevelSelectionActivity extends AppCompatActivity {
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
         decorView.setSystemUiVisibility(uiOptions);
 
+        //ActionBar actionBar = getActionBar();
+        //actionBar.hide();
 
         /*backBtn = (Button) findViewById(R.id.backButton);
         exitBtn = (Button) findViewById(R.id.exitButton);
