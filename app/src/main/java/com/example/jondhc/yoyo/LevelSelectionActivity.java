@@ -7,24 +7,24 @@ import android.view.View;
 import android.widget.Button;
 
 public class LevelSelectionActivity extends AppCompatActivity {
-    Button btnVolver, btnSalir;
+    Button backBtn, exitBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_selection);
 
-        btnVolver = (Button) findViewById(R.id.btnVolver);
-        btnSalir = (Button) findViewById(R.id.btnSalir);
+        backBtn = (Button) findViewById(R.id.backButton);
+        exitBtn = (Button) findViewById(R.id.exitButton);
 
-        btnVolver.setOnClickListener(new View.OnClickListener() {
+        backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent volver1 = new Intent(LevelSelectionActivity.this, MainActivity.class);
-                startActivity(volver1);
+                Intent backI = new Intent(LevelSelectionActivity.this, MainActivity.class);
+                startActivity(backI);
             }
         });
-        btnSalir.setOnClickListener(new View.OnClickListener() {
+        exitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
