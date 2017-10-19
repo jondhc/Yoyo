@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.jondhc.yoyo.MainActivity"
-    tools:showIn="@layout/activity_main"
-    android:background="@color/green">
+    tools:showIn="@layout/activity_main">
 
     <ImageView
         android:id="@+id/main_screen_text"
@@ -18,15 +17,15 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="0dp"
-        app:srcCompat="@drawable/yoyo"
-        android:contentDescription="@string/main_screen_image_description" />
+        android:contentDescription="@string/main_screen_image_description"
+        app:srcCompat="@drawable/yoyo" />
 
     <Button
         android:id="@+id/playButton"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:background="@drawable/button"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:background="@drawable/button" />
 
 </RelativeLayout>
