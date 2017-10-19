@@ -2,4 +2,7 @@
     <string name="app_name">Yoyo</string>
     <string name="action_settings">Settings</string>
     <string name="main_screen_image_description">App name</string>
+    <string name="backBtnTxt">Back</string>
+    <string name="exitBtnTxt">Exit</string>
+    <string name="font">Bungee</string>
 </resources>

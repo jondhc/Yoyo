@@ -25,7 +25,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_below="@id/main_screen_text"
         android:background="@drawable/playbutton" />
 
 </RelativeLayout>
