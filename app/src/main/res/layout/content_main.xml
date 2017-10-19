@@ -24,13 +24,14 @@
         app:layout_constraintVertical_bias="0.0">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/main_screen_text"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="-40dp"
-            app:srcCompat="@drawable/yoyo" />
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/yoyo"
+            android:contentDescription="@string/main_screen_image_description" />
 
         <Button
             android:id="@+id/playButton"
