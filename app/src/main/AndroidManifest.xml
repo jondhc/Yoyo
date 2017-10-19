@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LevelSelectionActivity"></activity>
+        <activity android:name=".LevelSelectionActivity" />
+        <activity android:name=".Level1Activity"></activity>
     </application>
 
 </manifest>
