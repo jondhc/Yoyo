@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class LevelSelectionActivity extends AppCompatActivity {
     Button btnVolver, btnSalir;
-    //Se puede, vaya que si
+    //Se puede, vaya que si se puede!
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
