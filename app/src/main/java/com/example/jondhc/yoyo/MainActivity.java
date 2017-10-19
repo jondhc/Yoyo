@@ -14,14 +14,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
+        decorView.setSystemUiVisibility(uiOptions);
+
         setContentView(R.layout.activity_main);
 
-        playBtn = (Button) findViewById(R.id.playButton);
-
-        playBtn.setOnClickListener(new View.OnClickListener() {
+        playBtn = (Button) findViewById(R.id.playButton);   //Detect the play button
+        playBtn.setOnClickListener(new View.OnClickListener() { //Detect touch on button
             @Override
             public void onClick(View v) {
-                Intent playI = new Intent(MainActivity.this, LevelSelectionActivity.class);
+                Intent playI = new Intent(MainActivity.this, LevelSelectionActivity.class); //Start next activity
                 startActivity(playI);
             }
         });

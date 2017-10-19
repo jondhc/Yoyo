@@ -14,6 +14,11 @@ public class LevelSelectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_selection);
 
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
+        decorView.setSystemUiVisibility(uiOptions);
+
+
         backBtn = (Button) findViewById(R.id.backButton);
         exitBtn = (Button) findViewById(R.id.exitButton);
 
