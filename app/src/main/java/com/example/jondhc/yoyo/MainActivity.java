@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button playBtn;
+    Button playBtn; //Initializing Play Button
 
 
     @Override
