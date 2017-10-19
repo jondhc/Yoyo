@@ -2,6 +2,7 @@
 
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,21 +13,33 @@
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
-        <Button
-            android:id="@+id/backButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:id="@+id/l1Button"
+            android:background="@null"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
             android:layout_weight="1"
-            android:text="@string/backBtnTxt" />
-
-        <Button
-            android:id="@+id/exitButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/l1" />
+        <ImageButton
+            android:id="@+id/l2Button"
+            android:background="@null"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
             android:layout_weight="1"
-            android:text="@string/exitBtnTxt" />
+            app:srcCompat="@drawable/l2" />
+        <ImageButton
+            android:id="@+id/l3Button"
+            android:background="@null"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/l3" />
     </LinearLayout>
 
     <LinearLayout
@@ -34,21 +47,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/linearLayout1">
+        android:layout_below="@+id/linearLayout1"
+        android:layout_weight="1">
 
-        <Button
-            android:id="@+id/backButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:id="@+id/l4Button"
+            android:background="@null"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
             android:layout_weight="1"
-            android:text="@string/backBtnTxt" />
-
-        <Button
-            android:id="@+id/exitButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/l4" />
+        <ImageButton
+            android:id="@+id/l5Button"
+            android:background="@null"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
             android:layout_weight="1"
-            android:text="@string/exitBtnTxt" />
+            app:srcCompat="@drawable/l5" />
+        <ImageButton
+            android:id="@+id/l6Button"
+            android:background="@null"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/l6" />
     </LinearLayout>
 
     <LinearLayout
@@ -56,21 +81,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/linearLayout2">
+        android:layout_below="@+id/linearLayout2"
+        android:layout_weight="1">
 
-        <Button
-            android:id="@+id/backButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/backBtnTxt" />
 
-        <Button
-            android:id="@+id/exitButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:id="@+id/l7Button"
+            android:background="@null"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
             android:layout_weight="1"
-            android:text="@string/exitBtnTxt" />
+            app:srcCompat="@drawable/l8" />
+        <ImageButton
+            android:id="@+id/l8Button"
+            android:background="@null"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/l7" />
+        <ImageButton
+            android:id="@+id/l9Button"
+            android:background="@null"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/l9" />
+
     </LinearLayout>
 </RelativeLayout>
 

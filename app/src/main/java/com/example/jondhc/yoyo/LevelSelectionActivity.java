@@ -1,6 +1,5 @@
 package com.example.jondhc.yoyo;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,7 +18,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
 
 
-        backBtn = (Button) findViewById(R.id.backButton);
+        /*backBtn = (Button) findViewById(R.id.backButton);
         exitBtn = (Button) findViewById(R.id.exitButton);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +33,6 @@ public class LevelSelectionActivity extends AppCompatActivity {
             public void onClick(View view) {
                 finish();
             }
-        });
+        });*/
     }
 }
