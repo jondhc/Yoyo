@@ -1,5 +1,6 @@
 package com.example.jondhc.yoyo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,13 +13,25 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn;
+    Button playBtn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        playBtn = (Button)findViewById(R.id.playButton);
+
+        playBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, LevelSelectionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         //getSupportActionBar().setTitle("");
