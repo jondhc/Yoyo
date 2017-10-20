@@ -93,7 +93,7 @@
             android:layout_height="100dp"
             android:scaleType="fitCenter"
             android:layout_weight="1"
-            app:srcCompat="@drawable/l8" />
+            app:srcCompat="@drawable/l7" />
         <ImageButton
             android:id="@+id/l8Button"
             android:background="@null"
@@ -101,7 +101,7 @@
             android:layout_height="100dp"
             android:scaleType="fitCenter"
             android:layout_weight="1"
-            app:srcCompat="@drawable/l7" />
+            app:srcCompat="@drawable/l8" />
         <ImageButton
             android:id="@+id/l9Button"
             android:background="@null"
