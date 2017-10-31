@@ -1,188 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     tools:context="com.example.jondhc.yoyo.LevelSelectionActivity">
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-
-        <ImageButton
-            android:id="@+id/l1Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l1" />
-        <ImageButton
-            android:id="@+id/l2Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l2" />
-        <ImageButton
-            android:id="@+id/l3Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l3" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/linearLayout1"
-        android:layout_weight="1">
-
-        <ImageButton
-            android:id="@+id/l4Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l4" />
-        <ImageButton
-            android:id="@+id/l5Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l5" />
-        <ImageButton
-            android:id="@+id/l6Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l6" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_weight="1">
-
-
-        <ImageButton
-            android:id="@+id/l7Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l7" />
-        <ImageButton
-            android:id="@+id/l8Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l8" />
-        <ImageButton
-            android:id="@+id/l9Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l9" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/linearLayout3"
-        android:layout_weight="1">
-
-
-        <ImageButton
-            android:id="@+id/l10Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l10" />
-        <ImageButton
-            android:id="@+id/l11Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l11" />
-        <ImageButton
-            android:id="@+id/l12Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l12" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/linearLayout4"
-        android:layout_weight="1">
-
-
-        <ImageButton
-            android:id="@+id/l13Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l13" />
-        <ImageButton
-            android:id="@+id/l14Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l14" />
-        <ImageButton
-            android:id="@+id/l15Button"
-            android:background="@null"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/l15" />
-
-    </LinearLayout>
-</RelativeLayout>
-
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/lvselectionscroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <ImageView
+            android:id="@+id/lvbackgroundimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
