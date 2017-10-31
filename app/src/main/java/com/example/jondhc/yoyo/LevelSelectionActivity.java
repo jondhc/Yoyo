@@ -30,12 +30,20 @@ public class LevelSelectionActivity extends AppCompatActivity {
         double temp = width * 4.5312;
         int height = (int) temp;
         View decorView = getWindow().getDecorView();
-
+        
+        //View decorView = getWindow().getDecorView();
+        //int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
+        //decorView.setSystemUiVisibility(uiOptions);
         ImageView iview = (ImageView) findViewById(R.id.lvbackgroundimg);
         GlideApp.with(this).load(R.drawable.lselection_background).override(width,height).into(iview);
 
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
         decorView.setSystemUiVisibility(uiOptions);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+
 
         //ActionBar actionBar = getActionBar();
         //actionBar.hide();
@@ -56,5 +64,11 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 finish();
             }
         });*/
+    }
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
 }
