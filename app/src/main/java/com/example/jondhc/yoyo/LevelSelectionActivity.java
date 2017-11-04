@@ -1,6 +1,7 @@
 package com.example.jondhc.yoyo;
 
 import android.app.WallpaperManager;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -23,31 +24,45 @@ public class LevelSelectionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        int width,height,bck_width,bck_height;
         setContentView(R.layout.activity_level_selection);
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        int width = size.x;
-        double temp = width * 4.5312;
-        int height = (int) temp;
-        View decorView = getWindow().getDecorView();
-        
-        //View decorView = getWindow().getDecorView();
-        //int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
-        //decorView.setSystemUiVisibility(uiOptions);
-        ImageView iview = (ImageView) findViewById(R.id.lvbackgroundimg);
-        GlideApp.with(this).load(R.drawable.lselection_background).override(width,height).into(iview);
 
+        View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
         decorView.setSystemUiVisibility(uiOptions);
 
+        // Hide ActionBar
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        if(actionBar != null)
+            actionBar.hide();
 
+        // Get screen size
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
 
+        // Background
+        ImageView view_bck = (ImageView) findViewById(R.id.lvbackgroundimg);
+        bck_width = size.x;
+        double temp = bck_width * 4.5312;
+        bck_height = (int) temp;
+        GlideApp.with(this).load(R.drawable.lselection_background).override(bck_width,bck_height).into(view_bck);
 
-        //ActionBar actionBar = getActionBar();
-        //actionBar.hide();
+        // Bridge
+        ImageView view_lvbridge = (ImageView) findViewById(R.id.lvbridge);
+        view_lvbridge.setX((float) (bck_width*0.26));
+        view_lvbridge.setY((float) (bck_height*0.69));
+        width = (int) (0.5*bck_width);
+        height = (int) (width*0.52461);
+        GlideApp.with(this).load(R.drawable.lvs_bridge).override(width,height).into(view_lvbridge);
+        view_lvbridge.setOnClickListener(new View.OnClickListener() { //Detect touch on button
+            @Override
+            public void onClick(View v) {
+                Intent playI = new Intent(LevelSelectionActivity.this, Level1Activity.class); //Start next activity
+                startActivity(playI);
+            }
+        });
+
 
         /*backBtn = (Button) findViewById(R.id.backButton);
         exitBtn = (Button) findViewById(R.id.exitButton);
