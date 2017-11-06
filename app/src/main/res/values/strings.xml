@@ -5,6 +5,9 @@
     <string name="backBtnTxt">Back</string>
     <string name="exitBtnTxt">Exit</string>
     <string name="font">Bungee</string>
+    <string name="character">Character</string>
     <string name="bcklvselection">Level selection backgroung</string>
+    <string name="flag">Completed flags for level selection screen</string>
     <string name="lvbridge">Bridge Level</string>
+    <string name="lvvegetables">Vegetables Level</string>
 </resources>

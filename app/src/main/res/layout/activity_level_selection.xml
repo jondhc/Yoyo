@@ -10,18 +10,57 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     tools:context="com.example.jondhc.yoyo.LevelSelectionActivity">
+        <!-- Background -->
         <ImageView
             android:id="@+id/lvbackgroundimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/bcklvselection">
         </ImageView>
+
+        <!-- Character -->
+        <ImageView
+            android:id="@+id/character"
+            android:rotation="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/character">
+        </ImageView>
+
+        <!-- Level Vegetables -->
+        <ImageView
+            android:id="@+id/lvvegetables"
+            android:rotation="-5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/lvvegetables">
+
+        </ImageView>
+        <!-- Level Flag -->
+        <ImageView
+            android:id="@+id/lvvegetables_flag"
+            android:rotation="-22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/flag">
+        </ImageView>
+
+        <!-- Level Bridge -->
         <ImageView
             android:id="@+id/lvbridge"
             android:rotation="-22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/lvbridge">
+
+        </ImageView>
+        <!-- Level Flag -->
+        <ImageView
+            android:id="@+id/lvbridge_flag"
+            android:rotation="-22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/flag">
         </ImageView>
 </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
