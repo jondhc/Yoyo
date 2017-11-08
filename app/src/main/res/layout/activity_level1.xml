@@ -41,4 +41,19 @@
         android:layout_marginBottom="10dp"
         android:layout_toRightOf="@id/dialogue_catch"/>
 
+    <TextView
+        android:id="@+id/count_of_fruits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="80dp"
+        android:textColor="@color/backgroundColor"
+        android:layout_toRightOf="@id/cat_catch"
+        android:layout_toLeftOf="@+id/basket"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="80dp"/>
+
 </RelativeLayout>
