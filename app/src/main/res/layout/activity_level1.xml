@@ -15,4 +15,10 @@
         android:src="@drawable/branch"
         android:layout_alignParentBottom="true"
         android:scaleType="centerCrop"/>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cat"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

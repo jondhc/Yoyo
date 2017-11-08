@@ -10,8 +10,11 @@ public class Level1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1);
+
+        // Hide ActionBar
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(false);
+        if(actionBar != null)
+            actionBar.hide();
 
     }
 
