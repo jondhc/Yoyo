@@ -30,7 +30,7 @@
         android:src="@drawable/chat1"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="80dp"
-        android:layout_toRightOf="@id/cat_catch"/>
+        android:layout_toEndOf="@id/cat_catch"/>
 
     <ImageView
         android:id="@+id/basket"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textAlignment="center"
-        android:textSize="80dp"
+        android:textSize="80sp"
         android:textColor="@color/backgroundColor"
         android:layout_toRightOf="@id/cat_catch"
         android:layout_toLeftOf="@+id/basket"
@@ -55,5 +55,97 @@
         android:layout_centerInParent="true"
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="80dp"/>
+
+    <ImageView
+        android:id="@+id/berry1"
+        android:layout_width="@dimen/berry_size"
+        android:layout_height="@dimen/berry_size"
+        android:src="@drawable/berry"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/berry2"
+        android:layout_width="@dimen/berry_size"
+        android:layout_height="@dimen/berry_size"
+        android:src="@drawable/berry"
+        android:layout_below="@id/berry1"/>
+
+    <ImageView
+        android:id="@+id/berry3"
+        android:layout_width="@dimen/berry_size"
+        android:layout_height="@dimen/berry_size"
+        android:src="@drawable/berry"
+        android:layout_toRightOf="@+id/berry1"
+        android:layout_marginTop="40dp"/>
+
+    <ImageView
+        android:id="@+id/berry4"
+        android:layout_width="@dimen/berry_size"
+        android:layout_height="@dimen/berry_size"
+        android:src="@drawable/berry"
+        android:layout_below="@id/berry3"
+        android:layout_toRightOf="@id/berry1"/>
+
+    <ImageView
+        android:id="@+id/berry5"
+        android:layout_width="@dimen/berry_size"
+        android:layout_height="@dimen/berry_size"
+        android:src="@drawable/berry"
+        android:layout_toRightOf="@id/berry4"
+        android:layout_marginTop="120dp"/>
+
+    <ImageView
+        android:id="@+id/berry_basket_1"
+        android:layout_width="@dimen/berry_basket_size"
+        android:layout_height="@dimen/berry_basket_size"
+        android:src="@drawable/berry"
+        android:visibility="invisible"
+        android:layout_marginTop="405dp"
+        android:layout_marginLeft="230dp"/>
+
+    <ImageView
+        android:id="@+id/berry_basket_2"
+        android:layout_width="@dimen/berry_basket_size"
+        android:layout_height="@dimen/berry_basket_size"
+        android:src="@drawable/berry"
+        android:visibility="invisible"
+        android:layout_marginTop="405dp"
+        android:layout_toRightOf="@id/berry_basket_1"/>
+
+    <ImageView
+        android:id="@+id/berry_basket_3"
+        android:layout_width="@dimen/berry_basket_size"
+        android:layout_height="@dimen/berry_basket_size"
+        android:src="@drawable/berry"
+        android:visibility="invisible"
+        android:layout_marginTop="405dp"
+        android:layout_toRightOf="@id/berry_basket_2"/>
+
+    <ImageView
+        android:id="@+id/berry_basket_4"
+        android:layout_width="@dimen/berry_basket_size"
+        android:layout_height="@dimen/berry_basket_size"
+        android:src="@drawable/berry"
+        android:visibility="invisible"
+        android:layout_marginTop="370dp"
+        android:layout_marginLeft="230dp"/>
+
+    <ImageView
+        android:id="@+id/berry_basket_5"
+        android:layout_width="@dimen/berry_basket_size"
+        android:layout_height="@dimen/berry_basket_size"
+        android:src="@drawable/berry"
+        android:visibility="invisible"
+        android:layout_marginTop="370dp"
+        android:layout_toRightOf="@id/berry_basket_4"/>
+
+    <ImageView
+        android:id="@+id/berry_basket_6"
+        android:layout_width="@dimen/berry_basket_size"
+        android:layout_height="@dimen/berry_basket_size"
+        android:src="@drawable/berry"
+        android:visibility="invisible"
+        android:layout_marginTop="370dp"
+        android:layout_toRightOf="@id/berry_basket_5"/>
 
 </RelativeLayout>
