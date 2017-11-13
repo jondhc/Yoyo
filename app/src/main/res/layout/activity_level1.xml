@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/branch" />
+        android:src="@drawable/tree_catch" />
 
     <ImageView
         android:id="@+id/cat_catch"
