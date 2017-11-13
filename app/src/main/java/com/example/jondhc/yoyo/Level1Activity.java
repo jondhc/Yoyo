@@ -9,9 +9,13 @@ import android.view.View;
 
 public class Level1Activity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
@@ -23,9 +27,19 @@ public class Level1Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_level1);
 
+
+
         //Adding drag and drop functionality
         View berry1 = findViewById(R.id.berry1);
         berry1.setOnTouchListener(new DragTouchListener());
+        View berry2 = findViewById(R.id.berry2);
+        berry2.setOnTouchListener(new DragTouchListener());
+        View berry3 = findViewById(R.id.berry3);
+        berry3.setOnTouchListener(new DragTouchListener());
+        View berry4 = findViewById(R.id.berry4);
+        berry4.setOnTouchListener(new DragTouchListener());
+        View berry5 = findViewById(R.id.berry5);
+        berry5.setOnTouchListener(new DragTouchListener());
     }
 
     @Override
