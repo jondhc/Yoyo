@@ -6,8 +6,11 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
 
 public class Level1Activity extends AppCompatActivity {
+
+    int basket_counter = 0; //Counter for the fruits
 
 
 
@@ -27,7 +30,8 @@ public class Level1Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_level1);
 
-
+        TextView counter = (TextView) findViewById(R.id.count_of_fruits);
+        counter.setText(String.valueOf(basket_counter));
 
         //Adding drag and drop functionality
         View berry1 = findViewById(R.id.berry1);
@@ -57,11 +61,14 @@ public class Level1Activity extends AppCompatActivity {
                 View.DragShadowBuilder shadowbuiler = new View.DragShadowBuilder(view);
                 view.startDrag(data, shadowbuiler, view, 0);
                 view.setVisibility(View.INVISIBLE);
+                basket_counter += 1;
+                TextView counter = (TextView) findViewById(R.id.count_of_fruits);
+                counter.setText(String.valueOf(basket_counter));
                 return true;
             }//end if
             else {
                 return false;
-            }
+            }//end else
         }   //end onTouch
     } //end DragTouchListener
 
