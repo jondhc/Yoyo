@@ -127,7 +127,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
             view_lvbridge.setOnClickListener(new View.OnClickListener() { //Detect touch on button
             @Override
             public void onClick(View v) {
-                Intent playI = new Intent(LevelSelectionActivity.this, Level1Activity.class); //Start next activity
+                Intent playI = new Intent(LevelSelectionActivity.this, LevelVegetables.class); //Start next activity
                 startActivity(playI);
                 }
             });
