@@ -44,6 +44,14 @@ public class Level1Activity extends AppCompatActivity {
         berry4.setOnTouchListener(new DragTouchListener());
         View berry5 = findViewById(R.id.berry5);
         berry5.setOnTouchListener(new DragTouchListener());
+        View berry6 = findViewById(R.id.berry6);
+        berry6.setOnTouchListener(new DragTouchListener());
+        View berry7 = findViewById(R.id.berry7);
+        berry7.setOnTouchListener(new DragTouchListener());
+        View berry8 = findViewById(R.id.berry8);
+        berry8.setOnTouchListener(new DragTouchListener());
+        View berry9 = findViewById(R.id.berry9);
+        berry9.setOnTouchListener(new DragTouchListener());
 
     }//end onCreate
 
@@ -83,6 +91,18 @@ public class Level1Activity extends AppCompatActivity {
                         break;
                     case 5:
                         audio = R.raw.five;
+                        break;
+                    case 6:
+                        audio = R.raw.six;
+                        break;
+                    case 7:
+                        audio = R.raw.seven;
+                        break;
+                    case 8:
+                        audio = R.raw.eight;
+                        break;
+                    case 9:
+                        audio = R.raw.nine;
                         break;
                 }
                 MediaPlayer mp = MediaPlayer.create(getApplicationContext(), audio);
