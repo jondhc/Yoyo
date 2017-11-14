@@ -34,9 +34,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/lvvegetables">
-
         </ImageView>
-        <!-- Level Flag -->
+        <!-- Level Vegetables Glow-->
+        <ImageView
+            android:id="@+id/lvvegetablesglow"
+            android:rotation="-5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/lvvegetablesglow">
+        </ImageView>
+        <!-- Level Vegetables Flag -->
         <ImageView
             android:id="@+id/lvvegetables_flag"
             android:rotation="-22"
@@ -52,11 +59,43 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/lvbridge">
-
         </ImageView>
-        <!-- Level Flag -->
+        <!-- Level Bridge Glow-->
+        <ImageView
+            android:id="@+id/lvbridgeglow"
+            android:rotation="-22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/lvbridgeglow">
+        </ImageView>
+        <!-- Level Bridge Flag -->
         <ImageView
             android:id="@+id/lvbridge_flag"
+            android:rotation="-22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/flag">
+        </ImageView>
+
+        <!-- Level Lily -->
+        <ImageView
+            android:id="@+id/lvlily"
+            android:rotation="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/lvbridge">
+        </ImageView>
+        <!-- Level Bridge Glow-->
+        <ImageView
+            android:id="@+id/lvlilyglow"
+            android:rotation="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/lvbridgeglow">
+        </ImageView>
+        <!-- Level Bridge Flag -->
+        <ImageView
+            android:id="@+id/lvlilyflag"
             android:rotation="-22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

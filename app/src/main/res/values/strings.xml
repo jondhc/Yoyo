@@ -9,5 +9,9 @@
     <string name="bcklvselection">Level selection backgroung</string>
     <string name="flag">Completed flags for level selection screen</string>
     <string name="lvbridge">Bridge Level</string>
+    <string name="lvbridgeglow">Glow alteration for bridge Level</string>
     <string name="lvvegetables">Vegetables Level</string>
+    <string name="lvvegetablesglow">Glow alteration for vegetables Level</string>
+    <string name="lvlily">Lily Level</string>
+    <string name="lvlilyglow">Glow alteration for lily Level</string>
 </resources>
