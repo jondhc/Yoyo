@@ -53,6 +53,16 @@ public class Level1Activity extends AppCompatActivity {
         View berry9 = findViewById(R.id.berry9);
         berry9.setOnTouchListener(new DragTouchListener());
 
+
+
+        View cat = findViewById(R.id.cat_catch);
+        cat.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                MediaPlayer initialInstructions = MediaPlayer.create(getApplicationContext(), R.raw.instructions_g);
+                initialInstructions.start();
+            }
+        });//end setOnClickListener
     }//end onCreate
 
     @Override
