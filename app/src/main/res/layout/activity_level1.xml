@@ -60,7 +60,8 @@
         android:layout_height="@dimen/berry_size"
         android:layout_marginTop="50dp"
         android:layout_marginStart="50dp"
-        android:src="@drawable/berry" />
+        android:src="@drawable/berry"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/berry2"
@@ -68,7 +69,8 @@
         android:layout_height="@dimen/berry_size"
         android:layout_below="@id/berry1"
         android:layout_marginStart="10dp"
-        android:src="@drawable/berry" />
+        android:src="@drawable/berry"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/berry3"
@@ -76,7 +78,8 @@
         android:layout_height="@dimen/berry_size"
         android:layout_marginTop="35dp"
         android:layout_toRightOf="@+id/berry1"
-        android:src="@drawable/berry" />
+        android:src="@drawable/berry"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/berry4"
@@ -86,7 +89,8 @@
         android:layout_toRightOf="@id/berry2"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
-        android:src="@drawable/berry" />
+        android:src="@drawable/berry"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/berry5"
@@ -94,7 +98,8 @@
         android:layout_height="@dimen/berry_size"
         android:layout_marginTop="110dp"
         android:layout_toRightOf="@id/berry4"
-        android:src="@drawable/berry" />
+        android:src="@drawable/berry"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/berry6"
@@ -103,7 +108,8 @@
         android:layout_marginTop="100dp"
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@id/berry5"
-        android:src="@drawable/berry" />
+        android:src="@drawable/berry"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/berry7"
@@ -112,7 +118,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="0dp"
         android:layout_toRightOf="@id/berry3"
-        android:src="@drawable/berry" />
+        android:src="@drawable/berry"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/berry8"
@@ -120,7 +127,8 @@
         android:layout_height="@dimen/berry_size"
         android:layout_marginTop="190dp"
         android:layout_toRightOf="@id/berry4"
-        android:src="@drawable/berry" />
+        android:src="@drawable/berry"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/berry9"
@@ -129,7 +137,8 @@
         android:layout_marginTop="200dp"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/berry8"
-        android:src="@drawable/berry" />
+        android:src="@drawable/berry"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/berry_basket_1"

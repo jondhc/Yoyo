@@ -9,6 +9,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class Level1Activity extends AppCompatActivity {
 
     int basket_counter = 0; //Counter for the fruits
@@ -18,7 +20,12 @@ public class Level1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
+        Random randomGenerator = new Random();
+        int maxFruits = 9;
+        int minFruits = 1;
+        int range = maxFruits - minFruits + 1;
+        int quantity = randomGenerator.nextInt(range) + minFruits;
+        System.out.println("Cantidad de frutas: " + quantity);
 
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
@@ -52,6 +59,72 @@ public class Level1Activity extends AppCompatActivity {
         berry8.setOnTouchListener(new DragTouchListener());
         View berry9 = findViewById(R.id.berry9);
         berry9.setOnTouchListener(new DragTouchListener());
+
+        switch(quantity){
+            case 1:
+                berry4.setVisibility(View.VISIBLE);
+                break;
+            case 2:
+                berry6.setVisibility(View.VISIBLE);
+                berry2.setVisibility(View.VISIBLE);
+                break;
+            case 3:
+                berry4.setVisibility(View.VISIBLE);
+                berry5.setVisibility(View.VISIBLE);
+                berry6.setVisibility(View.VISIBLE);
+                break;
+            case 4:
+                berry1.setVisibility(View.VISIBLE);
+                berry4.setVisibility(View.VISIBLE);
+                berry6.setVisibility(View.VISIBLE);
+                berry9.setVisibility(View.VISIBLE);
+                break;
+            case 5:
+                berry1.setVisibility(View.VISIBLE);
+                berry3.setVisibility(View.VISIBLE);
+                berry5.setVisibility(View.VISIBLE);
+                berry6.setVisibility(View.VISIBLE);
+                berry9.setVisibility(View.VISIBLE);
+                break;
+            case 6:
+                berry1.setVisibility(View.VISIBLE);
+                berry2.setVisibility(View.VISIBLE);
+                berry3.setVisibility(View.VISIBLE);
+                berry5.setVisibility(View.VISIBLE);
+                berry6.setVisibility(View.VISIBLE);
+                berry8.setVisibility(View.VISIBLE);
+                break;
+            case 7:
+                berry1.setVisibility(View.VISIBLE);
+                berry2.setVisibility(View.VISIBLE);
+                berry4.setVisibility(View.VISIBLE);
+                berry5.setVisibility(View.VISIBLE);
+                berry6.setVisibility(View.VISIBLE);
+                berry7.setVisibility(View.VISIBLE);
+                berry9.setVisibility(View.VISIBLE);
+                break;
+            case 8:
+                berry1.setVisibility(View.VISIBLE);
+                berry2.setVisibility(View.VISIBLE);
+                berry4.setVisibility(View.VISIBLE);
+                berry5.setVisibility(View.VISIBLE);
+                berry6.setVisibility(View.VISIBLE);
+                berry7.setVisibility(View.VISIBLE);
+                berry8.setVisibility(View.VISIBLE);
+                berry9.setVisibility(View.VISIBLE);
+                break;
+            case 9:
+                berry1.setVisibility(View.VISIBLE);
+                berry2.setVisibility(View.VISIBLE);
+                berry3.setVisibility(View.VISIBLE);
+                berry4.setVisibility(View.VISIBLE);
+                berry5.setVisibility(View.VISIBLE);
+                berry6.setVisibility(View.VISIBLE);
+                berry7.setVisibility(View.VISIBLE);
+                berry8.setVisibility(View.VISIBLE);
+                berry9.setVisibility(View.VISIBLE);
+                break;
+        }
 
 
 
