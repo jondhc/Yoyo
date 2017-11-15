@@ -134,6 +134,29 @@
         android:layout_marginLeft="110dp"
         android:layout_alignParentStart="@id/pensando"
         android:layout_alignBottom="@id/pensando"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/potato"
+        android:id="@+id/potato4"
+        android:layout_marginLeft="110dp"
+        android:layout_alignParentStart="@id/pensando"
+        android:layout_alignBottom="@id/pensando"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/salad"
+        android:id="@+id/lechuga4"
+        android:layout_marginLeft="110dp"
+        android:layout_alignParentStart="@id/pensando"
+        android:layout_alignBottom="@id/pensando"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"/>
 
 </RelativeLayout>
