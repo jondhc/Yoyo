@@ -10,10 +10,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Level1Activity extends AppCompatActivity {
 
     int basket_counter = 0; //Counter for the fruits
+    public int quantity;
 
 
     @Override
@@ -24,7 +27,7 @@ public class Level1Activity extends AppCompatActivity {
         int maxFruits = 9;
         int minFruits = 1;
         int range = maxFruits - minFruits + 1;
-        int quantity = randomGenerator.nextInt(range) + minFruits;
+        quantity = randomGenerator.nextInt(range) + minFruits;
         System.out.println("Cantidad de frutas: " + quantity);
 
         View decorView = getWindow().getDecorView();
@@ -60,7 +63,7 @@ public class Level1Activity extends AppCompatActivity {
         View berry9 = findViewById(R.id.berry9);
         berry9.setOnTouchListener(new DragTouchListener());
 
-        switch(quantity){
+        switch (quantity) {
             case 1:
                 berry4.setVisibility(View.VISIBLE);
                 break;
@@ -127,11 +130,10 @@ public class Level1Activity extends AppCompatActivity {
         }
 
 
-
         View cat = findViewById(R.id.cat_catch);
-        cat.setOnClickListener(new View.OnClickListener(){
+        cat.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 MediaPlayer initialInstructions = MediaPlayer.create(getApplicationContext(), R.raw.instructions_g);
                 initialInstructions.start();
             }
@@ -144,11 +146,17 @@ public class Level1Activity extends AppCompatActivity {
         return true;
     }//end onSupportNavigateUp
 
+    class userWon extends TimerTask {
+        public void run() {
+            MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);
+            winning.start();
+        }
+    }
 
 
     private final class DragTouchListener implements View.OnTouchListener {
-        public boolean onTouch(View view, MotionEvent motionEvent){
-            if(motionEvent.getAction() == MotionEvent.ACTION_DOWN){
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                 ClipData data = ClipData.newPlainText("", "");
                 View.DragShadowBuilder shadowbuiler = new View.DragShadowBuilder(view);
                 view.startDrag(data, shadowbuiler, view, 0);
@@ -159,7 +167,7 @@ public class Level1Activity extends AppCompatActivity {
 
                 //Media player
                 int audio = R.raw.one;
-                switch (basket_counter){
+                switch (basket_counter) {
                     case 1:
                         audio = R.raw.one;
                         break;
@@ -190,6 +198,11 @@ public class Level1Activity extends AppCompatActivity {
                 }
                 MediaPlayer mp = MediaPlayer.create(getApplicationContext(), audio);
                 mp.start();
+                if (basket_counter == quantity) {
+                    Timer timer = new Timer();
+                    timer.schedule(new userWon(), 1000);
+                    System.out.println("User won!");
+                }
                 return true;
             }//end if
             else {
@@ -197,7 +210,6 @@ public class Level1Activity extends AppCompatActivity {
             }//end else
         }//end onTouch
     } //end DragTouchListener
-
 
 
 }
