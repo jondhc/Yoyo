@@ -202,36 +202,54 @@ public class Level1Activity extends AppCompatActivity {
                     basket_counter += 1;    //Add one when a fruit is selected
                     TextView counter = (TextView) findViewById(R.id.count_of_fruits);   //Get the counter of collected fruits
                     counter.setText(String.valueOf(basket_counter));    //set the basket counter to the number of collected fruits
-
+                    View basket_berry;
                     //Media player
                     int audio = 0;
                     switch (basket_counter) {   //For every counted fruit, select the according audio
                         case 1:
                             audio = R.raw.one;
+                            basket_berry = findViewById(R.id.berry_basket_1);
+                            basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 2:
                             audio = R.raw.two;
+                            basket_berry = findViewById(R.id.berry_basket_2);
+                            basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 3:
                             audio = R.raw.three;
+                            basket_berry = findViewById(R.id.berry_basket_3);
+                            basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 4:
                             audio = R.raw.four;
+                            basket_berry = findViewById(R.id.berry_basket_4);
+                            basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 5:
                             audio = R.raw.five;
+                            basket_berry = findViewById(R.id.berry_basket_5);
+                            basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 6:
                             audio = R.raw.six;
+                            basket_berry = findViewById(R.id.berry_basket_6);
+                            basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 7:
                             audio = R.raw.seven;
+                            basket_berry = findViewById(R.id.berry_basket_7);
+                            basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 8:
                             audio = R.raw.eight;
+                            basket_berry = findViewById(R.id.berry_basket_8);
+                            basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 9:
                             audio = R.raw.nine;
+                            basket_berry = findViewById(R.id.berry_basket_9);
+                            basket_berry.setVisibility(View.VISIBLE);
                             break;
                     }//end switch
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), audio);    //set the audio to selected audio

@@ -144,8 +144,8 @@
         android:id="@+id/berry_basket_1"
         android:layout_width="@dimen/berry_basket_size"
         android:layout_height="@dimen/berry_basket_size"
-        android:layout_marginLeft="230dp"
-        android:layout_marginTop="405dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="@dimen/basket_fruits_row_one"
         android:src="@drawable/berry"
         android:visibility="invisible" />
 
@@ -153,7 +153,7 @@
         android:id="@+id/berry_basket_2"
         android:layout_width="@dimen/berry_basket_size"
         android:layout_height="@dimen/berry_basket_size"
-        android:layout_marginTop="405dp"
+        android:layout_marginTop="@dimen/basket_fruits_row_one"
         android:layout_toRightOf="@id/berry_basket_1"
         android:src="@drawable/berry"
         android:visibility="invisible" />
@@ -162,7 +162,7 @@
         android:id="@+id/berry_basket_3"
         android:layout_width="@dimen/berry_basket_size"
         android:layout_height="@dimen/berry_basket_size"
-        android:layout_marginTop="405dp"
+        android:layout_marginTop="@dimen/basket_fruits_row_one"
         android:layout_toRightOf="@id/berry_basket_2"
         android:src="@drawable/berry"
         android:visibility="invisible" />
@@ -171,8 +171,8 @@
         android:id="@+id/berry_basket_4"
         android:layout_width="@dimen/berry_basket_size"
         android:layout_height="@dimen/berry_basket_size"
-        android:layout_marginLeft="230dp"
-        android:layout_marginTop="370dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="@dimen/basket_fruits_row_two"
         android:src="@drawable/berry"
         android:visibility="invisible" />
 
@@ -180,7 +180,7 @@
         android:id="@+id/berry_basket_5"
         android:layout_width="@dimen/berry_basket_size"
         android:layout_height="@dimen/berry_basket_size"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="@dimen/basket_fruits_row_two"
         android:layout_toRightOf="@id/berry_basket_4"
         android:src="@drawable/berry"
         android:visibility="invisible" />
@@ -189,8 +189,35 @@
         android:id="@+id/berry_basket_6"
         android:layout_width="@dimen/berry_basket_size"
         android:layout_height="@dimen/berry_basket_size"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="@dimen/basket_fruits_row_two"
         android:layout_toRightOf="@id/berry_basket_5"
+        android:src="@drawable/berry"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/berry_basket_7"
+        android:layout_width="@dimen/berry_basket_size"
+        android:layout_height="@dimen/berry_basket_size"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="@dimen/basket_fruits_row_three"
+        android:src="@drawable/berry"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/berry_basket_8"
+        android:layout_width="@dimen/berry_basket_size"
+        android:layout_height="@dimen/berry_basket_size"
+        android:layout_marginTop="@dimen/basket_fruits_row_three"
+        android:layout_toRightOf="@id/berry_basket_7"
+        android:src="@drawable/berry"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/berry_basket_9"
+        android:layout_width="@dimen/berry_basket_size"
+        android:layout_height="@dimen/berry_basket_size"
+        android:layout_marginTop="@dimen/basket_fruits_row_three"
+        android:layout_toRightOf="@id/berry_basket_8"
         android:src="@drawable/berry"
         android:visibility="invisible" />
 
