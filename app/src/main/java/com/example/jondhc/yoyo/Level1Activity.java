@@ -34,13 +34,13 @@ public class Level1Activity extends AppCompatActivity {
         quantity = randomGenerator.nextInt(range) + minFruits;  //Setting number between the range
         System.out.println("Cantidad de frutas: " + quantity);  //Printing to console the number of fruits to display
 
-        //Hiiding the status bar
+        //Hiding the status bar
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
         //end of Hiding the status bar
 
-        // Hiding action bar
+        //Hiding action bar
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null)
             actionBar.hide();
@@ -48,8 +48,8 @@ public class Level1Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_level1);   //Set the contentView on the screen
 
-        View basket = findViewById(R.id.basket);
-        basket.setOnDragListener(new DragHandlingListener());
+        View basket = findViewById(R.id.basket);    //Get basket view
+        basket.setOnDragListener(new DragHandlingListener());   //set drag handler to detect when a fruit is dropped inside
 
         TextView counter = (TextView) findViewById(R.id.count_of_fruits);   //textView to display the counter of collected fruits
         counter.setText(String.valueOf(basket_counter));    //set the text on the counter to the number of collected fruits
@@ -168,19 +168,18 @@ public class Level1Activity extends AppCompatActivity {
     }
 
 
-    private final class DragTouchListener implements View.OnTouchListener { //Method to execute when user drags or touches a fruit
-        public boolean onTouch(View view, MotionEvent motionEvent) {    //Using as paramters the view which is interacted with and the motion
-            int action = motionEvent.getAction();
+    private final class DragTouchListener implements View.OnTouchListener { //Method to execute when user drags a fruit
+        public boolean onTouch(View view, MotionEvent motionEvent) {    //Using as parameters the view which is interacted with and the motion
+            int action = motionEvent.getAction();   //get the action
             switch (action) {
-                case MotionEvent.ACTION_DOWN:
+                case MotionEvent.ACTION_DOWN:   //When fruit is selected and dragged
                     System.out.println("Action Down");
                     ClipData data = ClipData.newPlainText("", "");  //Text to keep in clipboard if needed.
-                    View.DragShadowBuilder shadowbuilder = new View.DragShadowBuilder(view);
-                    view.startDrag(data, shadowbuilder, view, 0);
-                    //view.setVisibility(View.INVISIBLE);
-                    view.setAlpha(0);
+                    View.DragShadowBuilder shadowbuilder = new View.DragShadowBuilder(view);    //Shadow to show when dragging
+                    view.startDrag(data, shadowbuilder, view, 0);   //start dragging action
+                    view.setAlpha(0);   //Set alpha to 0 so the fruit is not shown in original place while dragging
                     break;
-                case MotionEvent.ACTION_UP:
+                case MotionEvent.ACTION_UP: //Code not accesed, other cases are handled in dragHandlingListener class
                     System.out.println("Action Up");
                     break;
             }//end switch
@@ -188,18 +187,18 @@ public class Level1Activity extends AppCompatActivity {
         }//end onTouch
     } //end DragTouchListener
 
-    class DragHandlingListener implements View.OnDragListener {
+    class DragHandlingListener implements View.OnDragListener { //Handle dragging
         @Override
         public boolean onDrag(View view, DragEvent event) {
-            int dragAction = event.getAction();
+            int dragAction = event.getAction(); //Get action when user drags and drops fruit
             switch (dragAction) {
-                case DragEvent.ACTION_DRAG_STARTED:
+                case DragEvent.ACTION_DRAG_STARTED: //When drag is started
                     break;
-                case DragEvent.ACTION_DRAG_ENTERED:
+                case DragEvent.ACTION_DRAG_ENTERED: //When drag action is entered
                     break;
-                case DragEvent.ACTION_DRAG_EXITED:
+                case DragEvent.ACTION_DRAG_EXITED:  //When drag action is exited
                     break;
-                case DragEvent.ACTION_DROP:
+                case DragEvent.ACTION_DROP: //When user drops fruit
                     basket_counter += 1;    //Add one when a fruit is selected
                     TextView counter = (TextView) findViewById(R.id.count_of_fruits);   //Get the counter of collected fruits
                     counter.setText(String.valueOf(basket_counter));    //set the basket counter to the number of collected fruits
@@ -252,13 +251,13 @@ public class Level1Activity extends AppCompatActivity {
                     }//end if
                     return true;
                 case DragEvent.ACTION_DRAG_ENDED:
-                    if (event.getResult() == true) {
+                    if (event.getResult()) {    //When drop action was made in the selected place
                         System.out.println("Was dropped in the correct place");
-                    } else if (event.getResult() == false) {
+                    } else if (!event.getResult()) {    //When drop action was not succesful (fruit dropped outside the basket)
                         System.out.println("Fruit was dropped outside");
-                        View originView = (View) event.getLocalState();
-                        originView.setAlpha(1);
-                    }
+                        View originView = (View) event.getLocalState(); //Get the element that was dropped
+                        originView.setAlpha(1); //return to its initial state
+                    }//end else if
                     break;
                 default:
                     break;
@@ -266,6 +265,4 @@ public class Level1Activity extends AppCompatActivity {
             return true;
         }//end onDrag
     }//end DragHandlingListener
-
-
 }//end Level1Activity
