@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
@@ -46,6 +47,9 @@ public class Level1Activity extends AppCompatActivity {
         //End of hiding action bar
 
         setContentView(R.layout.activity_level1);   //Set the contentView on the screen
+
+        View basket = findViewById(R.id.basket);
+        basket.setOnDragListener(new DragHandlingListener());
 
         TextView counter = (TextView) findViewById(R.id.count_of_fruits);   //textView to display the counter of collected fruits
         counter.setText(String.valueOf(basket_counter));    //set the text on the counter to the number of collected fruits
@@ -166,66 +170,94 @@ public class Level1Activity extends AppCompatActivity {
 
     private final class DragTouchListener implements View.OnTouchListener { //Method to execute when user drags or touches a fruit
         public boolean onTouch(View view, MotionEvent motionEvent) {    //Using as paramters the view which is interacted with and the motion
-            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {   //When user selects a fruit
-                ClipData data = ClipData.newPlainText("", "");  //Text to keep in clipboard if needed.
-                View.DragShadowBuilder shadowbuilder = new View.DragShadowBuilder(view);
-                view.startDrag(data, shadowbuilder, view, 0);
-                view.setVisibility(View.INVISIBLE); //When finished dragging, set View as invisible
-                basket_counter += 1;    //Add one when a fruit is selected
-                TextView counter = (TextView) findViewById(R.id.count_of_fruits);   //Get the counter of collected fruits
-                counter.setText(String.valueOf(basket_counter));    //set the basket counter to the number of collected fruits
-
-                //Media player
-                int audio = 0;
-                switch (basket_counter) {   //For every counted fruit, select the according audio
-                    case 1:
-                        audio = R.raw.one;
-                        break;
-                    case 2:
-                        audio = R.raw.two;
-                        break;
-                    case 3:
-                        audio = R.raw.three;
-                        break;
-                    case 4:
-                        audio = R.raw.four;
-                        break;
-                    case 5:
-                        audio = R.raw.five;
-                        break;
-                    case 6:
-                        audio = R.raw.six;
-                        break;
-                    case 7:
-                        audio = R.raw.seven;
-                        break;
-                    case 8:
-                        audio = R.raw.eight;
-                        break;
-                    case 9:
-                        audio = R.raw.nine;
-                        break;
-                }//end switch
-                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), audio);    //set the audio to selected audio
-                mp.start(); //Play the audio of the number of fruits.
-                if (basket_counter == quantity) {   //When all the fruits are collected
-                    Timer timer = new Timer();  //Timer for Winning audio to run
-                    timer.schedule(new userWon(), 1000);    //Setting delay for audio
-                    System.out.println("User won!");
-                    //Animation of character
-                    char_cat = findViewById(R.id.cat_catch);    //Getting character image
-                    RotateAnimation char_anim = new RotateAnimation(0f, 360f, char_cat.getWidth() / 2, char_cat.getHeight() / 2);
-                    char_anim.setInterpolator(new LinearInterpolator());
-                    char_anim.setRepeatCount(0);
-                    char_anim.setDuration(700);
-                    char_cat.startAnimation(char_anim);
-                    //ends Animation of character
-                }//end if
-                return true;
-            }//end if
-            else {
-                return false;
-            }//end else
+            int action = motionEvent.getAction();
+            switch (action) {
+                case MotionEvent.ACTION_DOWN:
+                    System.out.println("Action Down");
+                    ClipData data = ClipData.newPlainText("", "");  //Text to keep in clipboard if needed.
+                    View.DragShadowBuilder shadowbuilder = new View.DragShadowBuilder(view);
+                    view.startDrag(data, shadowbuilder, view, 0);
+                    view.setVisibility(View.INVISIBLE);
+                    break;
+                case MotionEvent.ACTION_UP:
+                    System.out.println("Action Up");
+                    break;
+            }//end switch
+            return true;
         }//end onTouch
     } //end DragTouchListener
+
+    class DragHandlingListener implements View.OnDragListener {
+        @Override
+        public boolean onDrag(View view, DragEvent event) {
+            int dragAction = event.getAction();
+            switch (dragAction) {
+                case DragEvent.ACTION_DRAG_STARTED:
+                    break;
+                case DragEvent.ACTION_DRAG_ENTERED:
+                    break;
+                case DragEvent.ACTION_DRAG_EXITED:
+                    break;
+                case DragEvent.ACTION_DROP:
+                    basket_counter += 1;    //Add one when a fruit is selected
+                    TextView counter = (TextView) findViewById(R.id.count_of_fruits);   //Get the counter of collected fruits
+                    counter.setText(String.valueOf(basket_counter));    //set the basket counter to the number of collected fruits
+
+                    //Media player
+                    int audio = 0;
+                    switch (basket_counter) {   //For every counted fruit, select the according audio
+                        case 1:
+                            audio = R.raw.one;
+                            break;
+                        case 2:
+                            audio = R.raw.two;
+                            break;
+                        case 3:
+                            audio = R.raw.three;
+                            break;
+                        case 4:
+                            audio = R.raw.four;
+                            break;
+                        case 5:
+                            audio = R.raw.five;
+                            break;
+                        case 6:
+                            audio = R.raw.six;
+                            break;
+                        case 7:
+                            audio = R.raw.seven;
+                            break;
+                        case 8:
+                            audio = R.raw.eight;
+                            break;
+                        case 9:
+                            audio = R.raw.nine;
+                            break;
+                    }//end switch
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), audio);    //set the audio to selected audio
+                    mp.start(); //Play the audio of the number of fruits.
+                    if (basket_counter == quantity) {   //When all the fruits are collected
+                        Timer timer = new Timer();  //Timer for Winning audio to run
+                        timer.schedule(new userWon(), 1000);    //Setting delay for audio
+                        System.out.println("User won!");
+                        //Animation of character
+                        char_cat = findViewById(R.id.cat_catch);    //Getting character image
+                        RotateAnimation char_anim = new RotateAnimation(0f, 360f, char_cat.getWidth() / 2, char_cat.getHeight() / 2);
+                        char_anim.setInterpolator(new LinearInterpolator());
+                        char_anim.setRepeatCount(0);
+                        char_anim.setDuration(700);
+                        char_cat.startAnimation(char_anim);
+                        //ends Animation of character
+                    }//end if
+                    return true;
+                case DragEvent.ACTION_DRAG_ENDED:
+                    break;
+                default:
+                    break;
+            }//end switch
+            return true;
+        }//end onDrag
+    }//end DragHandlingListener
+
+
 }//end Level1Activity
