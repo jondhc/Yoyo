@@ -177,7 +177,8 @@ public class Level1Activity extends AppCompatActivity {
                     ClipData data = ClipData.newPlainText("", "");  //Text to keep in clipboard if needed.
                     View.DragShadowBuilder shadowbuilder = new View.DragShadowBuilder(view);
                     view.startDrag(data, shadowbuilder, view, 0);
-                    view.setVisibility(View.INVISIBLE);
+                    //view.setVisibility(View.INVISIBLE);
+                    view.setAlpha(0);
                     break;
                 case MotionEvent.ACTION_UP:
                     System.out.println("Action Up");
@@ -251,6 +252,13 @@ public class Level1Activity extends AppCompatActivity {
                     }//end if
                     return true;
                 case DragEvent.ACTION_DRAG_ENDED:
+                    if (event.getResult() == true) {
+                        System.out.println("Was dropped in the correct place");
+                    } else if (event.getResult() == false) {
+                        System.out.println("Fruit was dropped outside");
+                        View originView = (View) event.getLocalState();
+                        originView.setAlpha(1);
+                    }
                     break;
                 default:
                     break;
