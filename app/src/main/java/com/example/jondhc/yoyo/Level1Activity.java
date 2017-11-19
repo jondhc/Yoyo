@@ -7,6 +7,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -17,6 +19,7 @@ public class Level1Activity extends AppCompatActivity {
 
     int basket_counter = 0; //Counter for the fruits
     public int quantity;
+    public View char_cat;
 
 
     @Override
@@ -201,7 +204,14 @@ public class Level1Activity extends AppCompatActivity {
                 if (basket_counter == quantity) {
                     Timer timer = new Timer();
                     timer.schedule(new userWon(), 1000);
-                    System.out.println("User won!");
+                    //System.out.println("User won!");
+                    char_cat = findViewById(R.id.cat_catch);
+                    RotateAnimation char_anim = new RotateAnimation(0f, 360f, char_cat.getWidth() / 2, char_cat.getHeight() / 2);
+                    char_anim.setInterpolator(new LinearInterpolator());
+                    char_anim.setRepeatCount(0);
+                    char_anim.setDuration(700);
+                    char_cat.startAnimation(char_anim);
+
                 }
                 return true;
             }//end if
