@@ -271,6 +271,8 @@ public class Level1Activity extends AppCompatActivity {
                 case DragEvent.ACTION_DRAG_ENDED:
                     if (event.getResult()) {    //When drop action was made in the selected place
                         System.out.println("Was dropped in the correct place");
+                        View originView = (View) event.getLocalState(); //Get the element that was dropped
+                        originView.setVisibility(View.INVISIBLE);   //If the fruit was dropped correctly, set as invisible
                     } else if (!event.getResult()) {    //When drop action was not succesful (fruit dropped outside the basket)
                         System.out.println("Fruit was dropped outside");
                         View originView = (View) event.getLocalState(); //Get the element that was dropped
