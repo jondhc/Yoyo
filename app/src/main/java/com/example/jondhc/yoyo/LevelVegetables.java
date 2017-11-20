@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class LevelVegetables extends Activity {
     int cuenta_frutas = 0;
-
+    int contadorR = 0;
     boolean lechugaYa = false;
     boolean papaYa = false;
     boolean tomateYa = false;
@@ -56,6 +56,13 @@ public class LevelVegetables extends Activity {
         tomato1 = findViewById(R.id.tomato1);
         tomato3 = findViewById(R.id.tomato3);
 
+
+        generaFrutas();
+
+
+    }
+
+    public void generaFrutas() {
         Random randomGenerator = new Random();
         int maxFrutas = 3;
         int minFrutas = 1;
@@ -63,15 +70,12 @@ public class LevelVegetables extends Activity {
         int escoge_frutas = randomGenerator.nextInt(range) + 1;
         System.out.println("Frutas para escoger=" + escoge_frutas);
 
-        generaFrutas(escoge_frutas);
-
-    }
-
-    public void generaFrutas(int number) {
-        switch (number) {
+        switch (escoge_frutas) {
             case 1:
                 System.out.println("Caso 1");
                 if (!lechugaYa) {
+                    lechugaYa = true;
+                    contadorR = 0;
                     System.out.println("IF ejecutado");
                     lechuga4.setVisibility(View.VISIBLE);
                     lechuga1.setOnClickListener(new View.OnClickListener() {
@@ -79,9 +83,13 @@ public class LevelVegetables extends Activity {
                         public void onClick(View v) {
                             v.setVisibility(View.INVISIBLE);
                             cuenta_frutas++;
+                            contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
-
+                            if (contadorR == 3) {
+                                generaFrutas();
+                                lechuga4.setVisibility(View.INVISIBLE);
+                            }
                         }
                     });
                     lechuga2.setOnClickListener(new View.OnClickListener() {
@@ -89,8 +97,13 @@ public class LevelVegetables extends Activity {
                         public void onClick(View v) {
                             v.setVisibility(View.INVISIBLE);
                             cuenta_frutas++;
+                            contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
+                            if (contadorR == 3) {
+                                generaFrutas();
+                                lechuga4.setVisibility(View.INVISIBLE);
+                            }
                         }
                     });
                     lechuga3.setOnClickListener(new View.OnClickListener() {
@@ -98,29 +111,39 @@ public class LevelVegetables extends Activity {
                         public void onClick(View v) {
                             v.setVisibility(View.INVISIBLE);
                             cuenta_frutas++;
+                            contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
+                            if (contadorR == 3) {
+                                generaFrutas();
+                                lechuga4.setVisibility(View.INVISIBLE);
+                            }
                         }
                     });
-                    lechugaYa = true;
-                    //lechuga4.setVisibility(View.INVISIBLE);
                 } else if (lechugaYa) {
                     System.out.println("ELSE-IF ejecutado");
-                    //generaFrutas();
+                    generaFrutas();
                 }
                 break;
             case 2:
                 System.out.println("Caso 2");
                 if (!papaYa) {
+                    papaYa = true;
                     System.out.println("IF ejecutado");
+                    contadorR = 0;
                     potato4.setVisibility(View.VISIBLE);
                     potato1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             v.setVisibility(View.INVISIBLE);
                             cuenta_frutas++;
+                            contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
+                            if (contadorR == 3) {
+                                generaFrutas();
+                                potato4.setVisibility(View.INVISIBLE);
+                            }
                         }
                     });
                     potato2.setOnClickListener(new View.OnClickListener() {
@@ -128,8 +151,13 @@ public class LevelVegetables extends Activity {
                         public void onClick(View v) {
                             v.setVisibility(View.INVISIBLE);
                             cuenta_frutas++;
+                            contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
+                            if (contadorR == 3) {
+                                generaFrutas();
+                                potato4.setVisibility(View.INVISIBLE);
+                            }
                         }
                     });
                     potato3.setOnClickListener(new View.OnClickListener() {
@@ -137,29 +165,40 @@ public class LevelVegetables extends Activity {
                         public void onClick(View v) {
                             v.setVisibility(View.INVISIBLE);
                             cuenta_frutas++;
+                            contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
+                            if (contadorR == 3) {
+                                generaFrutas();
+                                potato4.setVisibility(View.INVISIBLE);
+                            }
                         }
                     });
-                    papaYa = true;
-                    //potato4.setVisibility(View.INVISIBLE);
+
                 } else if (papaYa) {
                     System.out.println("ELSE-IF ejecutado");
-                    //generaFrutas();
+                    generaFrutas();
                 }
                 break;
             case 3:
                 System.out.println("Caso 3");
                 if (!tomateYa) {
+                    tomateYa = true;
                     System.out.println("IF ejecutado");
+                    contadorR = 0;
                     tomato4.setVisibility(View.VISIBLE);
                     tomato1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             v.setVisibility(View.INVISIBLE);
                             cuenta_frutas++;
+                            contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
+                            if (contadorR == 3) {
+                                generaFrutas();
+                                tomato4.setVisibility(View.INVISIBLE);
+                            }
                         }
                     });
                     tomato2.setOnClickListener(new View.OnClickListener() {
@@ -167,8 +206,13 @@ public class LevelVegetables extends Activity {
                         public void onClick(View v) {
                             v.setVisibility(View.INVISIBLE);
                             cuenta_frutas++;
+                            contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
+                            if (contadorR == 3) {
+                                generaFrutas();
+                                tomato4.setVisibility(View.INVISIBLE);
+                            }
                         }
                     });
                     tomato3.setOnClickListener(new View.OnClickListener() {
@@ -176,15 +220,19 @@ public class LevelVegetables extends Activity {
                         public void onClick(View v) {
                             v.setVisibility(View.INVISIBLE);
                             cuenta_frutas++;
+                            contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
+                            if (contadorR == 3) {
+                                generaFrutas();
+                                tomato4.setVisibility(View.INVISIBLE);
+                            }
                         }
                     });
-                    tomateYa = true;
-                    //tomato4.setVisibility(View.INVISIBLE);
+
                 } else if (tomateYa) {
                     System.out.println("ELSE-IF ejecutado");
-                    //generaFrutas();
+                    generaFrutas();
                 }
                 break;
         }
