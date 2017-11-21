@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".LevelSelectionActivity" />
-        <activity android:name=".Level1Activity"></activity>
+        <activity android:name=".Level1Activity" />
+        <activity android:name=".LevelVegetables" />
+        <activity android:name=".LevelSum" />
     </application>
 
 </manifest>

@@ -81,7 +81,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
             view_lvvegetables.setOnClickListener(new View.OnClickListener() { //Detect touch on button
                 @Override
                 public void onClick(View v) {
-                    Intent playI = new Intent(LevelSelectionActivity.this, Level1Activity.class); //Start next activity, change with correct level
+                    Intent playI = new Intent(LevelSelectionActivity.this, LevelVegetables.class); //Start next activity, change with correct level
                     startActivity(playI);
                 }
             });
@@ -184,7 +184,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
             view_lvbridge.setOnClickListener(new View.OnClickListener() { //Detect touch on button
             @Override
             public void onClick(View v) {
-                Intent playI = new Intent(LevelSelectionActivity.this, Level1Activity.class); //Start next activity
+                Intent playI = new Intent(LevelSelectionActivity.this, LevelVegetables.class); //Start next activity
                 startActivity(playI);
                 }
             });
@@ -287,7 +287,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
             view_lvglobo.setOnClickListener(new View.OnClickListener() { //Detect touch on button
                 @Override
                 public void onClick(View v) {
-                    Intent playI = new Intent(LevelSelectionActivity.this, Level1Activity.class); //Start next activity
+                    Intent playI = new Intent(LevelSelectionActivity.this, LevelSum.class); //Start next activity
                     startActivity(playI);
                 }
             });
