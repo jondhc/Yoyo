@@ -30,7 +30,7 @@
         <!-- Level Vegetables -->
         <ImageView
             android:id="@+id/lvvegetables"
-            android:rotation="-5"
+            android:rotation="0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/lvvegetables">
@@ -38,7 +38,7 @@
         <!-- Level Vegetables Glow-->
         <ImageView
             android:id="@+id/lvvegetablesglow"
-            android:rotation="-5"
+            android:rotation="0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/lvvegetablesglow">
@@ -46,6 +46,31 @@
         <!-- Level Vegetables Flag -->
         <ImageView
             android:id="@+id/lvvegetables_flag"
+            android:rotation="-22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/flag">
+        </ImageView>
+
+        <!-- Level Tree -->
+        <ImageView
+            android:id="@+id/lvtree"
+            android:rotation="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/lvtree">
+        </ImageView>
+        <!-- Level Tree Glow-->
+        <ImageView
+            android:id="@+id/lvtreeglow"
+            android:rotation="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/lvtreeglow">
+        </ImageView>
+        <!-- Level Tree Flag -->
+        <ImageView
+            android:id="@+id/lvtreeflag"
             android:rotation="-22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,7 +95,7 @@
         </ImageView>
         <!-- Level Bridge Flag -->
         <ImageView
-            android:id="@+id/lvbridge_flag"
+            android:id="@+id/lvbridgeflag"
             android:rotation="-22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -83,19 +108,44 @@
             android:rotation="0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/lvbridge">
+            android:contentDescription="@string/lvlily">
         </ImageView>
-        <!-- Level Bridge Glow-->
+        <!-- Level Lily Glow-->
         <ImageView
             android:id="@+id/lvlilyglow"
             android:rotation="0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/lvbridgeglow">
+            android:contentDescription="@string/lvlilyglow">
         </ImageView>
-        <!-- Level Bridge Flag -->
+        <!-- Level Lily Flag -->
         <ImageView
             android:id="@+id/lvlilyflag"
+            android:rotation="-22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/flag">
+        </ImageView>
+
+        <!-- Level Globo -->
+        <ImageView
+            android:id="@+id/lvglobo"
+            android:rotation="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/lvglobo">
+        </ImageView>
+        <!-- Level Globo Glow-->
+        <ImageView
+            android:id="@+id/lvgloboglow"
+            android:rotation="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/lvgloboglow">
+        </ImageView>
+        <!-- Level Globo Flag -->
+        <ImageView
+            android:id="@+id/lvgloboflag"
             android:rotation="-22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

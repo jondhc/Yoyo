@@ -5,7 +5,9 @@ package com.example.jondhc.yoyo;
  */
 
 public enum Levels {
-    BRIDGE,
     VEGETABLES,
-    LILY;
+    TREE,
+    BRIDGE,
+    LILY,
+    GLOBO;
 }

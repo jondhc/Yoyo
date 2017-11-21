@@ -14,4 +14,8 @@
     <string name="lvvegetablesglow">Glow alteration for vegetables Level</string>
     <string name="lvlily">Lily Level</string>
     <string name="lvlilyglow">Glow alteration for lily Level</string>
+    <string name="lvglobo">Globo Level</string>
+    <string name="lvgloboglow">Glow alteration for globo Level</string>
+    <string name="lvtree">Tree Level</string>
+    <string name="lvtreeglow">Glow alteration for tree Level</string>
 </resources>
