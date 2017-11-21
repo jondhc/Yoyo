@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
+    android:background="@drawable/main_background"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.jondhc.yoyo.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -25,9 +25,9 @@
         android:id="@+id/playButton"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/main_screen_text"
-        android:scaleType="centerCrop"
-        android:background="@drawable/playbutton" />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/playbutton"
+        android:scaleType="centerCrop" />
 
 </RelativeLayout>
