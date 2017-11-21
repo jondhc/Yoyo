@@ -20,11 +20,11 @@ import java.util.Map;
 
 public class LocalData implements Serializable {
     private static File mFolder;
-    Map<Levels, Boolean> statut_levels = Collections.synchronizedMap(new EnumMap<Levels, Boolean>(Levels.class));
+    Map<Levels, Integer> statut_levels = Collections.synchronizedMap(new EnumMap<Levels, Integer>(Levels.class));
 
         public LocalData(){
             for (Levels p : Levels.values()) {
-                statut_levels.put(p, false);
+                statut_levels.put(p, 0);
             }
         }
 
@@ -41,7 +41,7 @@ public class LocalData implements Serializable {
             } catch (Exception e) {e.printStackTrace();}
         }
 
-        public static LocalData loadData(Activity pContext){
+        public void loadData(Activity pContext){
             if(mFolder == null){
                 mFolder = pContext.getExternalFilesDir(null);
             }
@@ -53,6 +53,7 @@ public class LocalData implements Serializable {
                 ss=(LocalData) in.readObject();
                 in.close();
             } catch (Exception e) {e.printStackTrace();}
-            return ss;
+            if(ss != null)
+                this.statut_levels = ss.statut_levels;
         }
     }

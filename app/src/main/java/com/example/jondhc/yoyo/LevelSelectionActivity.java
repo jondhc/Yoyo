@@ -18,6 +18,9 @@ import java.util.Map;
 
 public class LevelSelectionActivity extends AppCompatActivity {
 
+    //  Initializing hashmap for levels
+    private LocalData statut_levels = new LocalData();
+
     public static void  setLocked(ImageView v)
     {
         ColorMatrix matrix = new ColorMatrix();
@@ -30,16 +33,11 @@ public class LevelSelectionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //  Initializing hashmap for levels
-        LocalData statut_levels = new LocalData();
-        // Used to see which level is next
-        Levels next = null;
-
+        statut_levels.loadData(this);
         // Only for debugging, should be set up with data linkage
-        next = Levels.LILY;
-        statut_levels.statut_levels.put(Levels.BRIDGE, true);
-        statut_levels.statut_levels.put(Levels.VEGETABLES, true);
+        statut_levels.statut_levels.put(Levels.LILY, -1);
+        //statut_levels.statut_levels.put(Levels.BRIDGE, 3);
+        statut_levels.statut_levels.put(Levels.VEGETABLES, 3);
 
         int width, height, bck_width, bck_height;
         setContentView(R.layout.activity_level_selection);
@@ -74,7 +72,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
         view_lvvegetables.setX((float) (bck_width * 0.62));
         view_lvvegetables.setY((float) (bck_height * 0.58));
         // Vegetables is completed
-        if (statut_levels.statut_levels.get(Levels.VEGETABLES) || next == Levels.VEGETABLES) {
+        if (statut_levels.statut_levels.get(Levels.VEGETABLES) > 0 || statut_levels.statut_levels.get(Levels.VEGETABLES) == -1) {
             // We done vegetables or vegetables is next, we can do the level
             view_lvvegetables.setOnClickListener(new View.OnClickListener() { //Detect touch on button
                 @Override
@@ -84,7 +82,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 }
             });
             // Vegetables is next level, we draw fog of war
-            if (next == Levels.VEGETABLES) {
+            if (statut_levels.statut_levels.get(Levels.VEGETABLES) == -1) {
                 // We will have to make another if to setup the glowing
 
                 // Draw character
@@ -95,7 +93,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 GlideApp.with(this).load(R.drawable.cat).override(width, height).into(view_character);
             }
             // Vegetables is done, if for debug but could be an else
-            if (statut_levels.statut_levels.get(Levels.VEGETABLES)) {
+            if (statut_levels.statut_levels.get(Levels.VEGETABLES) > 0) {
                 ImageView  view_lvvegetables_flag = (ImageView) findViewById(R.id.lvvegetables_flag);
                 view_lvvegetables_flag.setX((float) (bck_width * 0.64));
                 view_lvvegetables_flag.setY((float) (bck_height * 0.575));
@@ -110,7 +108,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
         // if we put other values, like 18, it doesn't work. Reason why is black magic
         width = (int) (0.25 * bck_width);
         height = width;
-        if (next == Levels.VEGETABLES){
+        if (statut_levels.statut_levels.get(Levels.VEGETABLES) == -1){
             // Glowing
             ImageView view_lvvegetables_glow = (ImageView) findViewById(R.id.lvvegetablesglow);
             view_lvvegetables_glow.setX((float) (bck_width * 0.62));
@@ -124,7 +122,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
         view_lvbridge.setX((float) (bck_width*0.27));
         view_lvbridge.setY((float) (bck_height*0.69));
         // Bridge is completed
-        if(statut_levels.statut_levels.get(Levels.BRIDGE) || next == Levels.BRIDGE){
+        if(statut_levels.statut_levels.get(Levels.BRIDGE) > 0 || statut_levels.statut_levels.get(Levels.BRIDGE) == -1){
             // We done bridge or bridge is next, we can do the level
             view_lvbridge.setOnClickListener(new View.OnClickListener() { //Detect touch on button
             @Override
@@ -134,7 +132,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 }
             });
             // Bridge is next level, we draw fog of war
-            if(next == Levels.BRIDGE){
+            if(statut_levels.statut_levels.get(Levels.BRIDGE) == -1){
                 // We will have to make another if to setup the glowing
 
                 // Draw character
@@ -145,7 +143,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 GlideApp.with(this).load(R.drawable.cat).override(width,height).into(view_character);
             }
             // Bridge is done, if for debug but could be an else
-            if(statut_levels.statut_levels.get(Levels.BRIDGE)) {
+            if(statut_levels.statut_levels.get(Levels.BRIDGE) > 0) {
                 ImageView view_lvbridge_flag = (ImageView) findViewById(R.id.lvbridge_flag);
                 view_lvbridge_flag.setX((float) (bck_width * 0.52));
                 view_lvbridge_flag.setY((float) (bck_height * 0.676));
@@ -159,7 +157,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
         }
         width = (int) (0.5*bck_width);
         height = (int) (width*0.52461);
-        if(next == Levels.BRIDGE) {
+        if(statut_levels.statut_levels.get(Levels.BRIDGE) == -1) {
             // Glowing
             ImageView view_lvbridge_glow = (ImageView) findViewById(R.id.lvbridgeglow);
             view_lvbridge_glow.setX((float) (bck_width*0.27));
@@ -172,10 +170,10 @@ public class LevelSelectionActivity extends AppCompatActivity {
 
         // Lily
         ImageView view_lvlily = (ImageView) findViewById(R.id.lvlily);
-        view_lvlily.setX((float) (bck_width*0.45));
-        view_lvlily.setY((float) (bck_height*0.747));
+        view_lvlily.setX((float) (bck_width*0.395));
+        view_lvlily.setY((float) (bck_height*0.735));
         // Lily is completed
-        if(statut_levels.statut_levels.get(Levels.LILY) || next == Levels.LILY){
+        if(statut_levels.statut_levels.get(Levels.LILY) > 0 || statut_levels.statut_levels.get(Levels.LILY) == -1){
             // We done lily or lily is next, we can do the level
             view_lvlily.setOnClickListener(new View.OnClickListener() { //Detect touch on button
                 @Override
@@ -185,7 +183,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 }
             });
             // Lily is next level, we draw character
-            if(next == Levels.LILY){
+            if(statut_levels.statut_levels.get(Levels.LILY) == -1){
                 // We will have to make another if to setup the glowing
 
                 // Draw character
@@ -196,7 +194,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 GlideApp.with(this).load(R.drawable.cat).override(width,height).into(view_character);
             }
             // Lily is done, if for debug but could be an else
-            if(statut_levels.statut_levels.get(Levels.LILY)) {
+            if(statut_levels.statut_levels.get(Levels.LILY) > 0) {
                 ImageView view_lvlily_flag = (ImageView) findViewById(R.id.lvlilyflag);
                 view_lvlily_flag.setX((float) (bck_width * 0.55));
                 view_lvlily_flag.setY((float) (bck_height * 0.731));
@@ -209,19 +207,17 @@ public class LevelSelectionActivity extends AppCompatActivity {
             setLocked(view_lvlily);
         }
 
-        if(next == Levels.LILY) {
-            // Glowing
-            // Black Magic
-            width = (int) (0.31*bck_width);
-            height = width;
-            ImageView view_lvlily_glow = (ImageView) findViewById(R.id.lvlilyglow);
-            view_lvlily_glow.setX((float) (bck_width*0.395));
-            view_lvlily_glow.setY((float) (bck_height*0.735));
-            GlideApp.with(this).load(R.drawable.lvl_lily_glow).override(width,height).into(view_lvlily_glow);
-        }
-
-        width = (int) (0.2*bck_width);
+        width = (int) (0.31*bck_width);
         height = width;
+
+        if(statut_levels.statut_levels.get(Levels.LILY) == -1) {
+            // Glowing
+
+            ImageView view_lvlily_glow = (ImageView) findViewById(R.id.lvlilyglow);
+            view_lvlily_glow.setX((float) (bck_width * 0.395));
+            view_lvlily_glow.setY((float) (bck_height * 0.735));
+            GlideApp.with(this).load(R.drawable.lvl_lily_glow).override(width, height).into(view_lvlily_glow);
+        }
         GlideApp.with(this).load(R.drawable.lvl_lily).override(width,height).into(view_lvlily);
 
         /*backBtn = (Button) findViewById(R.id.backButton);
@@ -240,11 +236,29 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 finish();
             }
         });*/
+
+        statut_levels.saveData(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        statut_levels.saveData(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        statut_levels.saveData(this);
     }
 
     @Override
     public boolean onSupportNavigateUp(){
         finish();
         return true;
+    }
+
+    public LocalData getStatut_levels(){
+        return this.statut_levels;
     }
 }
