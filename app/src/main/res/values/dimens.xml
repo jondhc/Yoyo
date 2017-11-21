@@ -5,4 +5,5 @@
     <dimen name="basket_fruits_row_one">450dp</dimen>
     <dimen name="basket_fruits_row_two">430dp</dimen>
     <dimen name="basket_fruits_row_three">410dp</dimen>
+    <dimen name="tamano_globo">80dp</dimen>
 </resources>
