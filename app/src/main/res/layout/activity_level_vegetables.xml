@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_vegetales"
+    tools:context="com.example.jondhc.yoyo.LevelVegetables">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cat"
+        android:layout_marginBottom="0dp"
+        android:id="@+id/cat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp" />
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/chat1"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="85dp"
+        android:layout_alignBottom="@+id/cat"
+        android:id="@+id/pensando" />
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/circle"
+        android:id="@+id/circulo"
+        android:layout_alignBottom="@+id/cat"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="130sp"
+        android:textColor="@color/backgroundColor"
+        android:textStyle="bold"
+        android:id="@+id/tecst"
+        android:layout_alignStart="@id/circulo"
+        android:layout_alignBottom="@id/circulo"
+        android:layout_marginLeft="28dp"/>
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/potato"
+        android:id="@+id/potato1"
+        android:layout_alignTop="@+id/tomato1"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/tomato"
+        android:id="@+id/tomato1"
+        android:layout_toLeftOf="@id/potato1"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/salad"
+        android:id="@+id/lechuga1"
+        android:layout_toRightOf="@id/potato1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/tomato"
+        android:id="@+id/tomato2"
+        android:layout_marginTop="130dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/potato"
+        android:id="@+id/potato2"
+        android:layout_toLeftOf="@id/tomato2"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="130dp"/>
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/salad"
+        android:id="@+id/lechuga2"
+        android:layout_toRightOf="@id/tomato2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="130dp"/>
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/salad"
+        android:id="@+id/lechuga3"
+        android:layout_alignTop="@+id/tomato2"
+        android:layout_marginTop="130dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/tomato"
+        android:id="@+id/tomato3"
+        android:layout_toLeftOf="@+id/lechuga3"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="250dp"/>
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/potato"
+        android:id="@+id/potato3"
+        android:layout_toRightOf="@id/lechuga3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="250dp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/tomato"
+        android:id="@+id/tomato4"
+        android:layout_marginLeft="110dp"
+        android:layout_alignParentStart="@id/pensando"
+        android:layout_alignBottom="@id/pensando"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/potato"
+        android:id="@+id/potato4"
+        android:layout_marginLeft="110dp"
+        android:layout_alignParentStart="@id/pensando"
+        android:layout_alignBottom="@id/pensando"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/salad"
+        android:id="@+id/lechuga4"
+        android:layout_marginLeft="110dp"
+        android:layout_alignParentStart="@id/pensando"
+        android:layout_alignBottom="@id/pensando"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
