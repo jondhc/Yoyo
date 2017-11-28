@@ -16,10 +16,15 @@
 
     <ImageView
         android:id="@+id/cat_catch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/cat" />
+        android:layout_width="117dp"
+        android:layout_height="117dp"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:id="@+id/dog_catch"
+        android:layout_width="117dp"
+        android:layout_height="117dp"
+        android:layout_alignParentBottom="true"/>
 
     <ImageView
         android:id="@+id/dialogue_catch"
@@ -27,7 +32,7 @@
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="80dp"
-        android:layout_toEndOf="@id/cat_catch"
+        android:layout_marginLeft="107dp"
         android:src="@drawable/chat1" />
 
     <ImageView
@@ -43,12 +48,8 @@
         android:id="@+id/count_of_fruits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="80dp"
-        android:layout_marginLeft="15dp"
-        android:layout_toLeftOf="@+id/basket"
-        android:layout_toRightOf="@id/cat_catch"
+        android:layout_alignBottom="@+id/dialogue_catch"
+        android:layout_marginLeft="145dp"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/backgroundColor"

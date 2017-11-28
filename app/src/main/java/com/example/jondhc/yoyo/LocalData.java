@@ -20,15 +20,32 @@ import java.util.Map;
 
 public class LocalData implements Serializable {
     private static File mFolder;
-    Map<Levels, Integer> statut_levels = Collections.synchronizedMap(new EnumMap<Levels, Integer>(Levels.class));
+    public Map<Levels, Integer> statut_levels = Collections.synchronizedMap(new EnumMap<Levels, Integer>(Levels.class));
+    private Map<Levels, Integer> statut_levels_cat = Collections.synchronizedMap(new EnumMap<Levels, Integer>(Levels.class));
+    private Map<Levels, Integer> statut_levels_dog = Collections.synchronizedMap(new EnumMap<Levels, Integer>(Levels.class));
+
 
         public LocalData(){
             for (Levels p : Levels.values()) {
-                statut_levels.put(p, 0);
+                if(p != Levels.VEGETABLES) {
+                    statut_levels.put(p, 0);
+                    statut_levels_cat.put(p, 0);
+                    statut_levels_dog.put(p, 0);
+                }
+                else{
+                    statut_levels.put(p, -1);
+                    statut_levels_cat.put(p, -1);
+                    statut_levels_dog.put(p, -1);
+                }
             }
         }
 
-        public void saveData(Activity pContext){
+        public void saveData(Activity pContext, Characters selectedC){
+
+            if(selectedC == Characters.CAT)
+                this.statut_levels_cat = this.statut_levels;
+            else if(selectedC == Characters.DOG)
+                this.statut_levels_dog = this.statut_levels;
             if(mFolder == null){
                 mFolder = pContext.getExternalFilesDir(null);
             }
@@ -41,7 +58,8 @@ public class LocalData implements Serializable {
             } catch (Exception e) {e.printStackTrace();}
         }
 
-        public void loadData(Activity pContext){
+        public void loadData(Activity pContext, Characters selectedC){
+
             if(mFolder == null){
                 mFolder = pContext.getExternalFilesDir(null);
             }
@@ -53,7 +71,13 @@ public class LocalData implements Serializable {
                 ss=(LocalData) in.readObject();
                 in.close();
             } catch (Exception e) {e.printStackTrace();}
-            if(ss != null)
-                this.statut_levels = ss.statut_levels;
+            if(ss != null) {
+                this.statut_levels_cat = ss.statut_levels_cat;
+                this.statut_levels_dog = ss.statut_levels_dog;
+                if(selectedC == Characters.CAT)
+                    this.statut_levels = this.statut_levels_cat;
+                else if(selectedC == Characters.DOG)
+                    this.statut_levels = this.statut_levels_dog;
+            }
         }
     }

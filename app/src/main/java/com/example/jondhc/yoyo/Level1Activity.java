@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -20,12 +21,25 @@ public class Level1Activity extends AppCompatActivity {
 
     int basket_counter = 0; //Counter for the fruits
     public int quantity;    //Quantity of fruits to display
-    public View char_cat;   //Variable for cat imageView
-
+    private ImageView character;   //Variable for charater imageView
+    private GlobalApplication mApp;
+    private Characters selectedC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_level1);
+        mApp = ((GlobalApplication)getApplicationContext());
+        selectedC = mApp.getGlobalVarValue();
+
+        if(selectedC == Characters.CAT) {
+            character = (ImageView)findViewById(R.id.cat_catch);    //Getting cat image
+            GlideApp.with(this).load(R.drawable.cat).into(character);
+        }
+        else if(selectedC == Characters.DOG) {
+            character = (ImageView)findViewById(R.id.dog_catch);    //Getting dog image
+            GlideApp.with(this).load(R.drawable.dog).into(character);
+        }
 
         Random randomGenerator = new Random();  //Random generator for fruits number
         int maxFruits = 9;  //Maximum Number of fruits to display
@@ -45,8 +59,6 @@ public class Level1Activity extends AppCompatActivity {
         if (actionBar != null)
             actionBar.hide();
         //End of hiding action bar
-
-        setContentView(R.layout.activity_level1);   //Set the contentView on the screen
 
         View basket = findViewById(R.id.basket);    //Get basket view
         basket.setOnDragListener(new DragHandlingListener());   //set drag handler to detect when a fruit is dropped inside
@@ -144,8 +156,7 @@ public class Level1Activity extends AppCompatActivity {
         //end of Switch-case for the quantity of fruits to be generated
 
 
-        View cat = findViewById(R.id.cat_catch);    //Getting the character ImageView
-        cat.setOnClickListener(new View.OnClickListener() { //Setting action when character is touched
+        character.setOnClickListener(new View.OnClickListener() { //Setting action when character is touched
             @Override
             public void onClick(View v) {
                 MediaPlayer initialInstructions = MediaPlayer.create(getApplicationContext(), R.raw.instructions_g);    //Set audio to instructions audio
@@ -259,12 +270,11 @@ public class Level1Activity extends AppCompatActivity {
                         timer.schedule(new userWon(), 1000);    //Setting delay for audio
                         System.out.println("User won!");
                         //Animation of character
-                        char_cat = findViewById(R.id.cat_catch);    //Getting character image
-                        RotateAnimation char_anim = new RotateAnimation(0f, 360f, char_cat.getWidth() / 2, char_cat.getHeight() / 2);
+                        RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
                         char_anim.setInterpolator(new LinearInterpolator());
                         char_anim.setRepeatCount(0);
                         char_anim.setDuration(700);
-                        char_cat.startAnimation(char_anim);
+                        character.startAnimation(char_anim);
                         //ends Animation of character
                     }//end if
                     return true;

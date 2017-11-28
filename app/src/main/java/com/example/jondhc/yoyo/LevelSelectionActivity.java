@@ -5,12 +5,14 @@ import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 
 import java.util.Collections;
 import java.util.EnumMap;
@@ -20,6 +22,8 @@ public class LevelSelectionActivity extends AppCompatActivity {
 
     //  Initializing hashmap for levels
     private LocalData statut_levels = new LocalData();
+    private GlobalApplication mApp;
+    private Characters selectedC;
 
     public static void  setLocked(ImageView v)
     {
@@ -33,7 +37,11 @@ public class LevelSelectionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //statut_levels.loadData(this);
+
+        mApp = ((GlobalApplication)getApplicationContext());
+        selectedC = mApp.getGlobalVarValue();
+        statut_levels.loadData(this, selectedC);
+
         // Only for debugging, should be set up with data linkage
         statut_levels.statut_levels.put(Levels.VEGETABLES, 3);
         statut_levels.statut_levels.put(Levels.TREE, 3);
@@ -54,6 +62,8 @@ public class LevelSelectionActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null)
             actionBar.hide();
+
+        NestedScrollView scrollView = (NestedScrollView) findViewById(R.id.lvselectionscroll);
 
         // Get screen size
         Display display = getWindowManager().getDefaultDisplay();
@@ -88,13 +98,15 @@ public class LevelSelectionActivity extends AppCompatActivity {
             // Vegetables is next level, we draw fog of war
             if (statut_levels.statut_levels.get(Levels.VEGETABLES) == -1) {
                 // We will have to make another if to setup the glowing
-
                 // Draw character
                 view_character.setX((float) (bck_width * 0.31));
                 view_character.setY((float) (bck_height * 0.455));
                 width = (int) (0.2 * bck_width);
                 height = width;
-                GlideApp.with(this).load(R.drawable.cat).override(width, height).into(view_character);
+                if(selectedC == Characters.CAT)
+                    GlideApp.with(this).load(R.drawable.cat).override(width, height).into(view_character);
+                else if(selectedC == Characters.DOG)
+                    GlideApp.with(this).load(R.drawable.dog).override(width, height).into(view_character);
             }
             // Vegetables is done, if for debug but could be an else
             if (statut_levels.statut_levels.get(Levels.VEGETABLES) > 0) {
@@ -124,8 +136,8 @@ public class LevelSelectionActivity extends AppCompatActivity {
 
         // Tree
         ImageView view_lvtree = (ImageView) findViewById(R.id.lvtree);
-        view_lvtree.setX((float) (bck_width * 0.62));
-        view_lvtree.setY((float) (bck_height * 0.58));
+        view_lvtree.setX((float) (bck_width * 0.57));
+        view_lvtree.setY((float) (bck_height * 0.56));
         // Tree is completed
         if (statut_levels.statut_levels.get(Levels.TREE) > 0 || statut_levels.statut_levels.get(Levels.TREE) == -1) {
             // We done tree or tree is next, we can do the level
@@ -145,12 +157,15 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 view_character.setY((float) (bck_height * 0.548));
                 width = (int) (0.2 * bck_width);
                 height = width;
-                GlideApp.with(this).load(R.drawable.cat).override(width, height).into(view_character);
+                if(selectedC == Characters.CAT)
+                    GlideApp.with(this).load(R.drawable.cat).override(width, height).into(view_character);
+                else if(selectedC == Characters.DOG)
+                    GlideApp.with(this).load(R.drawable.dog).override(width, height).into(view_character);
             }
             // Tree is done, if for debug but could be an else
             if (statut_levels.statut_levels.get(Levels.TREE) > 0) {
                 ImageView  view_lvtree_flag = (ImageView) findViewById(R.id.lvtreeflag);
-                view_lvtree_flag.setX((float) (bck_width * 0.64));
+                view_lvtree_flag.setX((float) (bck_width * 0.645));
                 view_lvtree_flag.setY((float) (bck_height * 0.565));
                 width = (int) (0.1 * bck_width);
                 height = width;
@@ -160,15 +175,14 @@ public class LevelSelectionActivity extends AppCompatActivity {
             setLocked(view_lvtree);
         }
 
-        // if we put other values, like 18, it doesn't work. Reason why is black magic
-        width = (int) (0.25 * bck_width);
+        width = (int) (0.37 * bck_width);
         height = width;
         if (statut_levels.statut_levels.get(Levels.TREE) == -1){
             // Glowing
             ImageView view_lvtree_glow = (ImageView) findViewById(R.id.lvtreeglow);
             view_lvtree_glow.setX((float) (bck_width * 0.62));
             view_lvtree_glow.setY((float) (bck_height * 0.58));
-           // GlideApp.with(this).load(R.drawable.lvl_tree_glow).override(width,height).into(view_lvtree_glow);
+            GlideApp.with(this).load(R.drawable.lvl_tree_glow).override(width,height).into(view_lvtree_glow);
         }
         GlideApp.with(this).load(R.drawable.lvl_tree).override(width,height).into(view_lvtree);
 
@@ -197,7 +211,10 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 view_character.setY((float) (bck_height*0.65));
                 width = (int) (0.2*bck_width);
                 height = width;
-                GlideApp.with(this).load(R.drawable.cat).override(width,height).into(view_character);
+                if(selectedC == Characters.CAT)
+                    GlideApp.with(this).load(R.drawable.cat).override(width, height).into(view_character);
+                else if(selectedC == Characters.DOG)
+                    GlideApp.with(this).load(R.drawable.dog).override(width, height).into(view_character);
             }
             // Bridge is done, if for debug but could be an else
             if(statut_levels.statut_levels.get(Levels.BRIDGE) > 0) {
@@ -248,7 +265,10 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 view_character.setY((float) (bck_height*0.715));
                 width = (int) (0.2*bck_width);
                 height = width;
-                GlideApp.with(this).load(R.drawable.cat).override(width,height).into(view_character);
+                if(selectedC == Characters.CAT)
+                    GlideApp.with(this).load(R.drawable.cat).override(width, height).into(view_character);
+                else if(selectedC == Characters.DOG)
+                    GlideApp.with(this).load(R.drawable.dog).override(width, height).into(view_character);
             }
             // Lily is done, if for debug but could be an else
             if(statut_levels.statut_levels.get(Levels.LILY) > 0) {
@@ -279,8 +299,8 @@ public class LevelSelectionActivity extends AppCompatActivity {
 
         // Globo
         ImageView view_lvglobo = (ImageView) findViewById(R.id.lvglobo);
-        view_lvglobo.setX((float) (bck_width*0.395));
-        view_lvglobo.setY((float) (bck_height*0.788));
+        view_lvglobo.setX((float) (bck_width*0.335));
+        view_lvglobo.setY((float) (bck_height*0.778));
         // Globo is completed
         if(statut_levels.statut_levels.get(Levels.GLOBO) > 0 || statut_levels.statut_levels.get(Levels.GLOBO) == -1){
             // We done globo or globo is next, we can do the level
@@ -300,7 +320,10 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 view_character.setY((float) (bck_height*0.782));
                 width = (int) (0.2*bck_width);
                 height = width;
-                GlideApp.with(this).load(R.drawable.cat).override(width,height).into(view_character);
+                if(selectedC == Characters.CAT)
+                    GlideApp.with(this).load(R.drawable.cat).override(width, height).into(view_character);
+                else if(selectedC == Characters.DOG)
+                    GlideApp.with(this).load(R.drawable.dog).override(width, height).into(view_character);
             }
             // Globo is done, if for debug but could be an else
             if(statut_levels.statut_levels.get(Levels.GLOBO) > 0) {
@@ -316,18 +339,20 @@ public class LevelSelectionActivity extends AppCompatActivity {
             setLocked(view_lvglobo);
         }
 
-        width = (int) (0.23*bck_width);
+        width = (int) (0.33*bck_width);
         height = width;
 
         if(statut_levels.statut_levels.get(Levels.GLOBO) == -1) {
             // Glowing
 
             ImageView view_lvglobo_glow = (ImageView) findViewById(R.id.lvgloboglow);
-            view_lvglobo_glow.setX((float) (bck_width * 0.395));
-            view_lvglobo_glow.setY((float) (bck_height * 0.788));
-           // GlideApp.with(this).load(R.drawable.lvl_globo_glow).override(width, height).into(view_lvglobo_glow);
+            view_lvglobo_glow.setX((float) (bck_width * 0.335));
+            view_lvglobo_glow.setY((float) (bck_height * 0.778));
+            GlideApp.with(this).load(R.drawable.lvl_globo_glow).override(width, height).into(view_lvglobo_glow);
         }
         GlideApp.with(this).load(R.drawable.lvl_globo).override(width,height).into(view_lvglobo);
+
+        // scrollView.requestChildFocus(view_character,view_character);
 
         /*backBtn = (Button) findViewById(R.id.backButton);
         exitBtn = (Button) findViewById(R.id.exitButton);
@@ -346,19 +371,19 @@ public class LevelSelectionActivity extends AppCompatActivity {
             }
         });*/
 
-        statut_levels.saveData(this);
+        statut_levels.saveData(this, selectedC);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        statut_levels.saveData(this);
+        statut_levels.saveData(this, selectedC);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        statut_levels.saveData(this);
+        statut_levels.saveData(this, selectedC);
     }
 
     @Override

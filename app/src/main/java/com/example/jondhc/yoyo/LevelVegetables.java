@@ -4,33 +4,42 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Random;
 
 public class LevelVegetables extends Activity {
-    int cuenta_frutas = 0;
-    int contadorR = 0;
-    boolean lechugaYa = false;
-    boolean papaYa = false;
-    boolean tomateYa = false;
+    private int cuenta_frutas = 0;
+    private int contadorR = 0;
+    private boolean lechugaYa = false;
+    private boolean papaYa = false;
+    private boolean tomateYa = false;
 
-    View lechuga4;
-    View lechuga1;
-    View lechuga2;
-    View lechuga3;
-    View potato4;
-    View potato1;
-    View potato2;
-    View potato3;
-    View tomato4;
-    View tomato2;
-    View tomato1;
-    View tomato3;
+    private View lechuga4;
+    private View lechuga1;
+    private View lechuga2;
+    private View lechuga3;
+    private View potato4;
+    private View potato1;
+    private View potato2;
+    private View potato3;
+    private View tomato4;
+    private View tomato2;
+    private View tomato1;
+    private View tomato3;
+
+    private ImageView character;
+
+    private GlobalApplication mApp;
+    private Characters selectedC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_level_vegetables);
+        mApp = ((GlobalApplication)getApplicationContext());
+        selectedC = mApp.getGlobalVarValue();
 
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
@@ -39,7 +48,15 @@ public class LevelVegetables extends Activity {
         ActionBar actionBar = getActionBar();
         if (actionBar != null)
             actionBar.hide();   // Hide ActionBar
-        setContentView(R.layout.activity_level_vegetables);
+
+        if(selectedC == Characters.CAT) {
+            character = findViewById(R.id.cat);    //Getting cat image
+            GlideApp.with(this).load(R.drawable.cat).into(character);
+        }
+        else if(selectedC == Characters.DOG) {
+            character = findViewById(R.id.dog);    //Getting dog image
+            GlideApp.with(this).load(R.drawable.dog).into(character);
+        }
 
         TextView count = findViewById(R.id.tecst);
         count.setText(String.valueOf(cuenta_frutas));
