@@ -10,6 +10,8 @@ import android.widget.ImageView;
 
 public class LevelSum extends AppCompatActivity {
 
+
+
     private GlobalApplication mApp;
     private Characters selectedC;
     @Override
@@ -38,6 +40,10 @@ public class LevelSum extends AppCompatActivity {
 
 
     }
+
+
+
+
 
 
 }
