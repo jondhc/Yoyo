@@ -12,31 +12,30 @@
 
     <ImageView
         android:id="@+id/main_screen_text"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:contentDescription="@string/main_screen_image_description"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/yoyo" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-    <Button
+    <ImageView
         android:id="@+id/playButtonCat"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/main_screen_text"
-        android:background="@drawable/playbutton"
-        android:scaleType="centerCrop" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-    <Button
+    <ImageView
         android:id="@+id/playButtonDog"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/main_screen_text"
-        android:background="@drawable/playbutton"
-        android:scaleType="centerCrop" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iconCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iconDog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
 
 </RelativeLayout>
