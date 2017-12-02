@@ -65,7 +65,7 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/airballoon"
         android:layout_marginTop="40dp"
-        android:layout_marginStart="125dp"
+        android:layout_centerHorizontal="true"
         android:visibility="invisible"/>
 
     <ImageView
@@ -76,7 +76,7 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/airballoon"
         android:layout_marginTop="40dp"
-        android:layout_marginStart="250dp"
+        android:layout_alignParentEnd="true"
         android:visibility="invisible"/>
 
     <ImageView
@@ -87,7 +87,7 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/airballoon"
         android:layout_marginTop="150dp"
-        android:layout_marginStart="250dp"
+        android:layout_alignParentEnd="true"
         android:visibility="invisible"/>
 
     <ImageView
@@ -98,7 +98,7 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/airballoon"
         android:layout_marginTop="150dp"
-        android:layout_marginStart="125dp"
+        android:layout_centerHorizontal="true"
         android:visibility="invisible"/>
 
     <ImageView
@@ -114,8 +114,8 @@
 
     <ImageView
         android:id="@+id/num1caso1_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num1"
@@ -125,8 +125,8 @@
 
     <ImageView
         android:id="@+id/num2caso1_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num2"
@@ -136,8 +136,8 @@
 
     <ImageView
         android:id="@+id/num6caso1_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num6"
@@ -147,8 +147,8 @@
 
     <ImageView
         android:id="@+id/num4caso2_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num4"
@@ -158,8 +158,8 @@
 
     <ImageView
         android:id="@+id/num2caso2_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num2"
@@ -169,8 +169,8 @@
 
     <ImageView
         android:id="@+id/num3caso2_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num3"
@@ -180,8 +180,8 @@
 
     <ImageView
         android:id="@+id/num4caso3_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num4"
@@ -191,8 +191,8 @@
 
     <ImageView
         android:id="@+id/num2caso3_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num2"
@@ -202,8 +202,8 @@
 
     <ImageView
         android:id="@+id/num5caso3_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num5"
@@ -213,8 +213,8 @@
 
     <ImageView
         android:id="@+id/num1caso4_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num1"
@@ -224,8 +224,8 @@
 
     <ImageView
         android:id="@+id/num3caso4_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num3"
@@ -235,8 +235,8 @@
 
     <ImageView
         android:id="@+id/num4caso4_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num4"
@@ -246,8 +246,8 @@
 
     <ImageView
         android:id="@+id/num1caso5_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num1"
@@ -257,8 +257,8 @@
 
     <ImageView
         android:id="@+id/num2caso5_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num2"
@@ -268,8 +268,8 @@
 
     <ImageView
         android:id="@+id/num5caso5_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num5"
@@ -279,8 +279,8 @@
 
     <ImageView
         android:id="@+id/num6caso6_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num6"
@@ -290,8 +290,8 @@
 
     <ImageView
         android:id="@+id/num2caso6_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num2"
@@ -301,8 +301,8 @@
 
     <ImageView
         android:id="@+id/num1caso6_sky"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/num1"
