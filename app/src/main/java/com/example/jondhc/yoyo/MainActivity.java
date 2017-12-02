@@ -171,8 +171,8 @@ public class MainActivity extends AppCompatActivity {
 
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE);*/
-        }
-    }
+        }//end if-else
+    }//end updateUI
 
     @Override
     protected void onResume() {
@@ -180,5 +180,5 @@ public class MainActivity extends AppCompatActivity {
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
         decorView.setSystemUiVisibility(uiOptions);
-    }
+    }//end onResume
 }//end MainActivity
