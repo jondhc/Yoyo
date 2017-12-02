@@ -1,5 +1,6 @@
 package com.example.jondhc.yoyo;
 
+import android.content.pm.ActivityInfo;
 import android.media.Image;
 import android.provider.ContactsContract;
 import android.support.v7.app.ActionBar;
@@ -15,6 +16,7 @@ public class LevelSum extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_level_sum);
         mApp = ((GlobalApplication)getApplicationContext());
         selectedC = mApp.getGlobalVarValue();

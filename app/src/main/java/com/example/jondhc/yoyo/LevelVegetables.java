@@ -2,6 +2,7 @@ package com.example.jondhc.yoyo;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -37,6 +38,7 @@ public class LevelVegetables extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_level_vegetables);
         mApp = ((GlobalApplication)getApplicationContext());
         selectedC = mApp.getGlobalVarValue();

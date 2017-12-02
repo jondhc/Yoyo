@@ -1,6 +1,7 @@
 package com.example.jondhc.yoyo;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Point;
@@ -37,7 +38,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mApp = ((GlobalApplication)getApplicationContext());
         selectedC = mApp.getGlobalVarValue();
         statut_levels.loadData(this, selectedC);
