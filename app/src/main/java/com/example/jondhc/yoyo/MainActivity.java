@@ -173,4 +173,12 @@ public class MainActivity extends AppCompatActivity {
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE);*/
         }
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
+        decorView.setSystemUiVisibility(uiOptions);
+    }
 }//end MainActivity
