@@ -3,38 +3,28 @@ package com.example.jondhc.yoyo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.gms.auth.api.Auth;
-
-
-import static com.example.jondhc.yoyo.Characters.CAT;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static int RC_SIGN_IN = 100;
     Button playBtnCat; //Initializing Cat Play Button
     Button playBtnDog; //Initializing Dog Play Button
     GlobalApplication mApp;
     private GoogleSignInClient mGoogleSignInClient;
-    private static int RC_SIGN_IN = 100;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mApp = ((GlobalApplication)getApplicationContext());
+        mApp = ((GlobalApplication) getApplicationContext());
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
         decorView.setSystemUiVisibility(uiOptions);
@@ -76,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(playI);
             }
         });
-    }
+    }//end onCreate
 
     @Override
     protected void onStart() {
@@ -84,14 +74,14 @@ public class MainActivity extends AppCompatActivity {
         // Check for existing Google Sign In account, if the user is already signed in
         // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        System.out.println(account);
         //updateUI(account);
-
-    }
+    }//end onStart
 
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
+    }//end signIn
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -102,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
             // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
-        }
-    }
+        }//end if
+    }//end onActivityResult
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
@@ -111,11 +101,14 @@ public class MainActivity extends AppCompatActivity {
 
             // Signed in successfully, show authenticated UI.
             //updateUI(account);
-        } catch (ApiException e) {
+            System.out.println(account);
+        }//end try
+        catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
             //Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
             //updateUI(null);
-        }
-    }
-}
+            System.out.println("signInResult:failed code=" + e.getStatusCode());
+        }//end catch
+    }//end handleSignInResult
+}//end MainActivity
