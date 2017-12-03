@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mApp = ((GlobalApplication)getApplicationContext());
-        mApp = ((GlobalApplication) getApplicationContext());
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
         decorView.setSystemUiVisibility(uiOptions);
@@ -71,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         signIn();
         database = FirebaseDatabase.getInstance();
         user = mAuth.getCurrentUser();
+        mApp.setUser(user);
 
         /*View yoyoSignIn = findViewById(R.id.main_screen_text);
         yoyoSignIn.setOnClickListener(new View.OnClickListener() { //Detect touch on button
@@ -105,6 +105,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mApp.setGlobalVarValue(Characters.CAT);
+                myRef = database.getReference(user.getUid()+" Character ");
+                myRef.setValue("Cat was selected");
                 Intent playI = new Intent(MainActivity.this, LevelSelectionActivity.class); //Start next activity
                 startActivity(playI);
             }
@@ -120,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mApp.setGlobalVarValue(Characters.DOG);
+                myRef = database.getReference(user.getUid()+" Character ");
+                myRef.setValue("Dog was selected");
                 Intent playI = new Intent(MainActivity.this, LevelSelectionActivity.class); //Start next activity
                 startActivity(playI);
             }

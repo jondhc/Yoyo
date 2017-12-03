@@ -44,7 +44,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
                     public void run() {
                         scrollView.scrollTo((int)view_character.getX(), (int)view_character.getY());
                     }
-                }, 300);
+                }, 450);
     }
 
     @Override
@@ -53,7 +53,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mApp = ((GlobalApplication)getApplicationContext());
         selectedC = mApp.getGlobalVarValue();
-        statut_levels.loadData(this, selectedC);
+        statut_levels.loadData(this, selectedC,mApp.getUser());
 
         // Only for debugging, should be set up with data linkage
         statut_levels.statut_levels.put(Levels.VEGETABLES, 3);
@@ -383,21 +383,21 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 finish();
             }
         });*/
-        statut_levels.saveData(this, selectedC);
+        statut_levels.saveData(this, selectedC,mApp.getUser());
         scrollToCharDelay();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        statut_levels.saveData(this, selectedC);
+        statut_levels.saveData(this, selectedC,mApp.getUser());
         scrollView.scrollTo((int)view_character.getX(), (int)view_character.getY());
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        statut_levels.saveData(this, selectedC);
+        statut_levels.saveData(this, selectedC,mApp.getUser());
     }
 
     @Override
