@@ -25,14 +25,26 @@ public class LevelSelectionActivity extends AppCompatActivity {
     private LocalData statut_levels = new LocalData();
     private GlobalApplication mApp;
     private Characters selectedC;
+    private NestedScrollView scrollView;
+    private ImageView view_character;
 
-    public static void  setLocked(ImageView v)
+    private static void setLocked(ImageView v)
     {
         ColorMatrix matrix = new ColorMatrix();
         matrix.setSaturation(0);  //0 means grayscale
         ColorMatrixColorFilter cf = new ColorMatrixColorFilter(matrix);
         v.setColorFilter(cf);
         //v.setImageAlpha(128);   // 128 = 0.5
+    }
+
+    private void scrollToCharDelay(){
+        new java.util.Timer().schedule(
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        scrollView.scrollTo((int)view_character.getX(), (int)view_character.getY());
+                    }
+                }, 300);
     }
 
     @Override
@@ -64,7 +76,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
         if (actionBar != null)
             actionBar.hide();
 
-        NestedScrollView scrollView = (NestedScrollView) findViewById(R.id.lvselectionscroll);
+        scrollView = (NestedScrollView) findViewById(R.id.lvselectionscroll);
 
         // Get screen size
         Display display = getWindowManager().getDefaultDisplay();
@@ -79,7 +91,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
         GlideApp.with(this).load(R.drawable.lselection_background).override(bck_width, bck_height).into(view_bck);
 
         // Initializing character view
-        ImageView view_character = (ImageView) findViewById(R.id.character);
+        view_character = (ImageView) findViewById(R.id.character);
         view_character.bringToFront();
 
         // Vegetables
@@ -371,14 +383,15 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 finish();
             }
         });*/
-
         statut_levels.saveData(this, selectedC);
+        scrollToCharDelay();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         statut_levels.saveData(this, selectedC);
+        scrollView.scrollTo((int)view_character.getX(), (int)view_character.getY());
     }
 
     @Override
