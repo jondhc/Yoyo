@@ -55,13 +55,15 @@ public class MainActivity extends AppCompatActivity {
         // Build a GoogleSignInClient with the options specified by gso.
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        View yoyoSignIn = findViewById(R.id.main_screen_text);
+        signIn();
+
+        /*View yoyoSignIn = findViewById(R.id.main_screen_text);
         yoyoSignIn.setOnClickListener(new View.OnClickListener() { //Detect touch on button
             @Override
             public void onClick(View v) {
-                signIn();
+                //signIn();
             }
-        });
+        });*/
 
         playBtnCat = (Button) findViewById(R.id.playButtonCat);   //Detect the play button
         playBtnCat.setOnClickListener(new View.OnClickListener() { //Detect touch on button
