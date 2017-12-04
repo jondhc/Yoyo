@@ -3,6 +3,7 @@ package com.example.jondhc.yoyo;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -40,6 +41,8 @@ public class LevelVegetables extends Activity {
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_level_vegetables);
+        AudioIni.start(); //Start media player
+        MediaPlayer AudioIni = MediaPlayer.create(getApplicationContext(), R.raw.instructions_g);//set the audio to selected audio
         mApp = ((GlobalApplication) getApplicationContext());
         selectedC = mApp.getGlobalVarValue();
 
@@ -74,7 +77,6 @@ public class LevelVegetables extends Activity {
         tomato1 = findViewById(R.id.tomato1);
         tomato3 = findViewById(R.id.tomato3);
 
-
         generaFrutas();
 
 
@@ -82,7 +84,7 @@ public class LevelVegetables extends Activity {
 
     public void generaFrutas() {
         Random randomGenerator = new Random();
-        int maxFrutas = 3;
+        final int maxFrutas = 3;
         int minFrutas = 1;
         int range = maxFrutas - minFrutas + 1;
         int escoge_frutas = randomGenerator.nextInt(range) + 1;
@@ -104,9 +106,12 @@ public class LevelVegetables extends Activity {
                             contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
-                            if (contadorR == 3) {
+                            if (contadorR == 3 && contadorR != 9) {
                                 generaFrutas();
                                 lechuga4.setVisibility(View.INVISIBLE);
+                            }
+                            else if(cuenta_frutas==9 && contadorR == 3){
+                                 System.out.println("Felicidades");
                             }
                         }
                     });
@@ -118,9 +123,12 @@ public class LevelVegetables extends Activity {
                             contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
-                            if (contadorR == 3) {
+                            if (contadorR == 3 && contadorR != 9) {
                                 generaFrutas();
                                 lechuga4.setVisibility(View.INVISIBLE);
+                            }
+                            else if(cuenta_frutas==9 && contadorR == 3){
+                                System.out.println("Felicidades");
                             }
                         }
                     });
@@ -132,15 +140,21 @@ public class LevelVegetables extends Activity {
                             contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
-                            if (contadorR == 3) {
+                            if (contadorR == 3 && contadorR != 9) {
                                 generaFrutas();
                                 lechuga4.setVisibility(View.INVISIBLE);
                             }
+                            else if(cuenta_frutas==9 && contadorR == 3){
+                                System.out.println("Felicidades");
+                            }
                         }
                     });
-                } else if (lechugaYa) {
+                } else if (lechugaYa && cuenta_frutas != 9) {
                     System.out.println("ELSE-IF ejecutado");
                     generaFrutas();
+                }
+                else if (tomateYa && cuenta_frutas == 9){
+                    System.out.println("Felicidades");
                 }
                 break;
             case 2:
@@ -158,9 +172,12 @@ public class LevelVegetables extends Activity {
                             contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
-                            if (contadorR == 3) {
+                            if (contadorR == 3 && contadorR != 9) {
                                 generaFrutas();
                                 potato4.setVisibility(View.INVISIBLE);
+                            }
+                            else if(cuenta_frutas==9 && contadorR == 3){
+                                System.out.println("Felicidades");
                             }
                         }
                     });
@@ -172,9 +189,12 @@ public class LevelVegetables extends Activity {
                             contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
-                            if (contadorR == 3) {
+                            if (contadorR == 3 && contadorR != 9) {
                                 generaFrutas();
                                 potato4.setVisibility(View.INVISIBLE);
+                            }
+                            else if(cuenta_frutas==9 && contadorR == 3){
+                                System.out.println("Felicidades");
                             }
                         }
                     });
@@ -186,16 +206,22 @@ public class LevelVegetables extends Activity {
                             contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
-                            if (contadorR == 3) {
+                            if (contadorR == 3 && contadorR != 9) {
                                 generaFrutas();
                                 potato4.setVisibility(View.INVISIBLE);
+                            }
+                            else if(cuenta_frutas==9 && contadorR == 3){
+                                System.out.println("Felicidades");
                             }
                         }
                     });
 
-                } else if (papaYa) {
+                } else if (papaYa && cuenta_frutas != 9) {
                     System.out.println("ELSE-IF ejecutado");
                     generaFrutas();
+                }
+                else if (tomateYa && cuenta_frutas == 9){
+                    System.out.println("Felicidades");
                 }
                 break;
             case 3:
@@ -213,9 +239,12 @@ public class LevelVegetables extends Activity {
                             contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
-                            if (contadorR == 3) {
+                            if (contadorR == 3 && contadorR != 9) {
                                 generaFrutas();
                                 tomato4.setVisibility(View.INVISIBLE);
+                            }
+                            else if(cuenta_frutas==9 && contadorR == 3){
+                                System.out.println("Felicidades");
                             }
                         }
                     });
@@ -227,9 +256,12 @@ public class LevelVegetables extends Activity {
                             contadorR++;
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
-                            if (contadorR == 3) {
+                            if (contadorR == 3 && contadorR != 9) {
                                 generaFrutas();
                                 tomato4.setVisibility(View.INVISIBLE);
+                            }
+                            else if(cuenta_frutas==9 && contadorR == 3){
+                                System.out.println("Felicidades");
                             }
                         }
                     });
@@ -239,20 +271,64 @@ public class LevelVegetables extends Activity {
                             v.setVisibility(View.INVISIBLE);
                             cuenta_frutas++;
                             contadorR++;
+                            //playAudio(cuenta_frutas);
                             TextView count = (TextView) findViewById(R.id.tecst);
                             count.setText(String.valueOf(cuenta_frutas));
-                            if (contadorR == 3) {
+                            if (contadorR == 3 && contadorR != 9) {
                                 generaFrutas();
                                 tomato4.setVisibility(View.INVISIBLE);
                             }
+                            else if(cuenta_frutas==9 && contadorR == 3){
+                                System.out.println("Felicidades");
+                            }
                         }
                     });
-
-                } else if (tomateYa) {
+                } else if (tomateYa && cuenta_frutas != 9) {
                     System.out.println("ELSE-IF ejecutado");
                     generaFrutas();
+                } else if (tomateYa && cuenta_frutas == 9){
+                    System.out.println("Felicidades");
                 }
                 break;
+        }
+    }
+    public void playAudio(int contador){
+        switch (contador){
+            case 1:
+                MediaPlayer num1 = MediaPlayer.create(getApplicationContext(), R.raw.one);
+                num1.start();
+                break;
+            case 2:
+                MediaPlayer num2 = MediaPlayer.create(getApplicationContext(), R.raw.two);
+                num2.start();
+                break;
+            case 3:
+                MediaPlayer num3 = MediaPlayer.create(getApplicationContext(), R.raw.three);
+                num3.start();
+                break;
+            case 4:
+                MediaPlayer num4 = MediaPlayer.create(getApplicationContext(), R.raw.four);
+                num4.start();
+                break;
+            case 5:
+                MediaPlayer num5 = MediaPlayer.create(getApplicationContext(), R.raw.five);
+                num5.start();
+                break;
+            case 6:
+                MediaPlayer num6 = MediaPlayer.create(getApplicationContext(), R.raw.six);
+                num6.start();
+                break;
+            case 7:
+                MediaPlayer num7 = MediaPlayer.create(getApplicationContext(), R.raw.seven);
+                num7.start();
+                break;
+            case 8:
+                MediaPlayer num8 = MediaPlayer.create(getApplicationContext(), R.raw.eight);
+                num8.start();
+                break;
+            case 9:
+                MediaPlayer num9 = MediaPlayer.create(getApplicationContext(), R.raw.nine);
+                num9.start();
         }
     }
 }

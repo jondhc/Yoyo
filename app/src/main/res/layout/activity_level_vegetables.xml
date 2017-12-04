@@ -7,30 +7,24 @@
     tools:context="com.example.jondhc.yoyo.LevelVegetables">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:id="@+id/cat"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="5dp" />
+        android:id="@+id/catV"
+        android:layout_width="117dp"
+        android:layout_height="117dp"
+        android:layout_alignParentBottom="true"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:id="@+id/dog"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="5dp" />
+        android:id="@+id/dogV"
+        android:layout_width="117dp"
+        android:layout_height="117dp"
+        android:layout_alignParentBottom="true"/>
 
     <ImageView
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:src="@drawable/chat1"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="85dp"
-        android:layout_alignBottom="@+id/cat"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="430dp"
         android:id="@+id/pensando" />
 
     <ImageView
@@ -38,19 +32,20 @@
         android:layout_height="130dp"
         android:src="@drawable/circle"
         android:id="@+id/circulo"
-        android:layout_alignBottom="@+id/cat"
+        android:layout_marginTop="430dp"
         android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="1"
         android:textSize="130sp"
         android:textColor="@color/backgroundColor"
         android:textStyle="bold"
         android:id="@+id/tecst"
         android:layout_alignStart="@id/circulo"
         android:layout_alignBottom="@id/circulo"
+        android:layout_marginTop="400dp"
         android:layout_marginLeft="28dp"/>
 
     <ImageView
@@ -138,10 +133,8 @@
         android:layout_height="100dp"
         android:src="@drawable/tomato"
         android:id="@+id/tomato4"
-        android:layout_marginLeft="110dp"
-        android:layout_alignParentStart="@id/pensando"
-        android:layout_alignBottom="@id/pensando"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="440dp"
         android:visibility="invisible"/>
 
     <ImageView
@@ -149,10 +142,8 @@
         android:layout_height="100dp"
         android:src="@drawable/potato"
         android:id="@+id/potato4"
-        android:layout_marginLeft="110dp"
-        android:layout_alignParentStart="@id/pensando"
-        android:layout_alignBottom="@id/pensando"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="440dp"
         android:visibility="invisible"/>
 
     <ImageView
@@ -160,10 +151,8 @@
         android:layout_height="100dp"
         android:src="@drawable/salad"
         android:id="@+id/lechuga4"
-        android:layout_marginLeft="110dp"
-        android:layout_alignParentStart="@id/pensando"
-        android:layout_alignBottom="@id/pensando"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="440dp"
         android:visibility="invisible"/>
 
 </RelativeLayout>
