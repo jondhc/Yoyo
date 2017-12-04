@@ -3,6 +3,8 @@ package com.example.jondhc.yoyo;
 import android.app.Activity;
 
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -32,6 +34,12 @@ public class LocalData implements Serializable {
 
     // Will be used to see which datas are most recent
     private Timestamp current_time = new Timestamp(0);
+
+    //Database
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference catL = database.getReference("statut_level_cat");
+    private DatabaseReference dogL = database.getReference("statut_level_dog");
+    private DatabaseReference currTime = database.getReference("current_time");
 
     // Basic constructor for LocalData, will build a blank game save
     public LocalData() {
@@ -77,10 +85,9 @@ public class LocalData implements Serializable {
             e.printStackTrace();
         }
 
-        // TODO save database
-        // set(this.statut_level_cat)
-        // set(this.statut_level_dog)
-        // set(this.current_time)
+        catL.setValue(this.statut_levels_cat.toString());
+        dogL.setValue(this.statut_levels_cat.toString());
+        currTime.setValue(this.current_time.toString());
     }
 
     public void loadData(Activity pContext, Characters selectedC, FirebaseUser user) {
