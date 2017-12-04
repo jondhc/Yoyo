@@ -35,6 +35,12 @@ public class LocalData implements Serializable {
     // Will be used to see which datas are most recent
     private Timestamp current_time = new Timestamp(0);
 
+    //Database
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference catL = database.getReference("statut_level_cat");
+    private DatabaseReference dogL = database.getReference("statut_level_dog");
+    private DatabaseReference currTime = database.getReference("current_time");
+
     // Basic constructor for LocalData, will build a blank game save
     public LocalData() {
         for (Levels p : Levels.values()) {
@@ -79,10 +85,6 @@ public class LocalData implements Serializable {
             e.printStackTrace();
         }
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference catL = database.getReference("statut_level_cat");
-        DatabaseReference dogL = database.getReference("statut_level_dog");
-        DatabaseReference currTime = database.getReference("current_time");
         catL.setValue(this.statut_levels_cat.toString());
         dogL.setValue(this.statut_levels_cat.toString());
         currTime.setValue(this.current_time.toString());
