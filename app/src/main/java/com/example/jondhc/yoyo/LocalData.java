@@ -1,10 +1,14 @@
 package com.example.jondhc.yoyo;
 
 import android.app.Activity;
+import android.util.Log;
 
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,6 +22,8 @@ import java.sql.Timestamp;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by clem on 14/11/17.
@@ -40,6 +46,10 @@ public class LocalData implements Serializable {
     private DatabaseReference catL = database.getReference("statut_level_cat");
     private DatabaseReference dogL = database.getReference("statut_level_dog");
     private DatabaseReference currTime = database.getReference("current_time");
+    private String catLValue;
+    private String dogLValue;
+    private String currTimeValue;
+
 
     // Basic constructor for LocalData, will build a blank game save
     public LocalData() {
@@ -109,6 +119,57 @@ public class LocalData implements Serializable {
         }
 
         //TODO Connection to database
+
+        catL.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                catLValue = dataSnapshot.getValue(String.class);
+                Log.d(TAG, "Value is: " + catLValue);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+        dogL.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                dogLValue = dataSnapshot.getValue(String.class);
+                Log.d(TAG, "Value is: " + dogLValue);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+        currTime.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                currTimeValue = dataSnapshot.getValue(String.class);
+                Log.d(TAG, "Value is: " + currTimeValue);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+        //remote = new LocalData(catLValue, dogLValue, currTimeValue);
+
         // remote = new LocalData(get(statut_levels_cat),get(statut_levels_dog),get(current_time));
 
         // Network is unreachable but local datas exists
