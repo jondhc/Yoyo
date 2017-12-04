@@ -49,8 +49,8 @@ public class LevelSelectionActivity extends AppCompatActivity {
         if(mApp.getStatutLevels() == null)
             mApp.setStatutLevels(statut_levels);
         mApp.getStatutLevels().loadData(this, selectedC, mApp.getUser());
-        mApp.getStatutLevels().statut_levels.put(Levels.BRIDGE,-1);
-        mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+        //mApp.getStatutLevels().statut_levels.put(Levels.BRIDGE,-1);
+        //mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
         int width, height, bck_width, bck_height;
         setContentView(R.layout.activity_level_selection);
 

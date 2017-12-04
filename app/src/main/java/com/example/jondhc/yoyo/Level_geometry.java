@@ -1,11 +1,14 @@
 package com.example.jondhc.yoyo;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
 import java.util.Timer;
@@ -17,6 +20,7 @@ public class Level_geometry extends AppCompatActivity {
 
     private GlobalApplication mApp;
     private Characters selectedC;
+    private ImageView character;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +44,6 @@ public class Level_geometry extends AppCompatActivity {
         View rectangulo1 = findViewById(R.id.rectangulo_geo);
         View triangulo1 = findViewById(R.id.triangulo_geo);
 
-        ImageView character;
         if (selectedC == Characters.CAT) {
             character = (ImageView) findViewById(R.id.cat_num);    //Getting cat image
             GlideApp.with(this).load(R.drawable.cat).into(character);
@@ -124,6 +127,22 @@ public class Level_geometry extends AppCompatActivity {
         public void run() {
             MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
             winning.start();    //Play audio
+            //Animation of character
+            RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+            char_anim.setInterpolator(new LinearInterpolator());
+            char_anim.setRepeatCount(0);
+            char_anim.setDuration(700);
+            character.startAnimation(char_anim);
+            mApp.getStatutLevels().statut_levels.put(Levels.BRIDGE,3);
+            mApp.getStatutLevels().statut_levels.put(Levels.LILY,-1);
+            new java.util.Timer().schedule(
+                    new java.util.TimerTask() {
+                        @Override
+                        public void run() {
+                            Intent nextLvScreen = new Intent(Level_geometry.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                            startActivity(nextLvScreen);
+                        }
+                    }, 900);
         }
     }
 }
