@@ -46,9 +46,14 @@ public class LevelSelectionActivity extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mApp = ((GlobalApplication) getApplicationContext());
         selectedC = mApp.getGlobalVarValue();
+
         if(mApp.getStatutLevels() == null)
             mApp.setStatutLevels(statut_levels);
-        mApp.getStatutLevels().loadData(this, selectedC, mApp.getUser());
+
+        if(mApp.getStatutLevels().statut_levels.get(Levels.VEGETABLES) != -1)
+            mApp.getStatutLevels().saveData(this, selectedC);
+
+        mApp.getStatutLevels().loadData(this, selectedC);
         //mApp.getStatutLevels().statut_levels.put(Levels.BRIDGE,-1);
         //mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
         int width, height, bck_width, bck_height;
@@ -378,21 +383,28 @@ public class LevelSelectionActivity extends AppCompatActivity {
             else if (selectedC == Characters.DOG)
                 GlideApp.with(this).load(R.drawable.dog).override(width, height).into(view_character);
         }
-        mApp.getStatutLevels().saveData(this, selectedC, mApp.getUser());
+        mApp.getStatutLevels().saveData(this, selectedC);
         scrollToCharDelay();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mApp.getStatutLevels().saveData(this, selectedC, mApp.getUser());
+        mApp.getStatutLevels().saveData(this, selectedC);
         scrollView.scrollTo((int) view_character.getX(), (int) view_character.getY());
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        startActivity(new Intent(this,MainActivity.class));
+        this.finish();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mApp.getStatutLevels().saveData(this, selectedC, mApp.getUser());
+        mApp.getStatutLevels().saveData(this, selectedC);
     }
 
     @Override

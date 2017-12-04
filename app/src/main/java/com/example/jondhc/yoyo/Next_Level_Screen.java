@@ -36,7 +36,6 @@ public class Next_Level_Screen extends AppCompatActivity {
         //End of hiding action bar
 
         Button next_button = (Button) findViewById(R.id.next);
-        mApp.getStatutLevels().saveData(this, selectedC, mApp.getUser());
         next_button.setOnClickListener(new View.OnClickListener() { //Setting action when next is touched
             @Override
             public void onClick(View v) {
