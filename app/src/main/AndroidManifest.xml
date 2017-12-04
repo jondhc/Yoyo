@@ -24,6 +24,8 @@
         <activity android:name=".Level1Activity" />
         <activity android:name=".LevelVegetables" />
         <activity android:name=".LevelSum" />
+        <activity android:name=".Level_geometry" />
+        <activity android:name=".Level_phone"></activity>
     </application>
 
 </manifest>
