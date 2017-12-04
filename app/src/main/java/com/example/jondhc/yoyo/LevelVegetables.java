@@ -2,10 +2,13 @@ package com.example.jondhc.yoyo;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,8 +44,8 @@ public class LevelVegetables extends Activity {
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_level_vegetables);
+        MediaPlayer AudioIni = MediaPlayer.create(getApplicationContext(), R.raw.instructions_g);
         AudioIni.start(); //Start media player
-        MediaPlayer AudioIni = MediaPlayer.create(getApplicationContext(), R.raw.instructions_g);//set the audio to selected audio
         mApp = ((GlobalApplication) getApplicationContext());
         selectedC = mApp.getGlobalVarValue();
 
@@ -55,10 +58,10 @@ public class LevelVegetables extends Activity {
             actionBar.hide();   // Hide ActionBar
 
         if (selectedC == Characters.CAT) {
-            character = findViewById(R.id.cat);    //Getting cat image
+            character = findViewById(R.id.catV);    //Getting cat image
             GlideApp.with(this).load(R.drawable.cat).into(character);
         } else if (selectedC == Characters.DOG) {
-            character = findViewById(R.id.dog);    //Getting dog image
+            character = findViewById(R.id.dogV);    //Getting dog image
             GlideApp.with(this).load(R.drawable.dog).into(character);
         }
 
@@ -112,6 +115,22 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                  System.out.println("Felicidades");
+                                //Animation of character
+                                RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                                char_anim.setInterpolator(new LinearInterpolator());
+                                char_anim.setRepeatCount(0);
+                                char_anim.setDuration(700);
+                                character.startAnimation(char_anim);
+                                mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                                mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                                startActivity(nextLvScreen);
+                                            }
+                                        }, 900);
                             }
                         }
                     });
@@ -129,6 +148,22 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
+                                //Animation of character
+                                RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                                char_anim.setInterpolator(new LinearInterpolator());
+                                char_anim.setRepeatCount(0);
+                                char_anim.setDuration(700);
+                                character.startAnimation(char_anim);
+                                mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                                mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                                startActivity(nextLvScreen);
+                                            }
+                                        }, 900);
                             }
                         }
                     });
@@ -146,6 +181,22 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
+                                //Animation of character
+                                RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                                char_anim.setInterpolator(new LinearInterpolator());
+                                char_anim.setRepeatCount(0);
+                                char_anim.setDuration(700);
+                                character.startAnimation(char_anim);
+                                mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                                mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                                startActivity(nextLvScreen);
+                                            }
+                                        }, 900);
                             }
                         }
                     });
@@ -155,6 +206,22 @@ public class LevelVegetables extends Activity {
                 }
                 else if (tomateYa && cuenta_frutas == 9){
                     System.out.println("Felicidades");
+                    //Animation of character
+                    RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                    char_anim.setInterpolator(new LinearInterpolator());
+                    char_anim.setRepeatCount(0);
+                    char_anim.setDuration(700);
+                    character.startAnimation(char_anim);
+                    mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                    mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                    new java.util.Timer().schedule(
+                            new java.util.TimerTask() {
+                                @Override
+                                public void run() {
+                                    Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                    startActivity(nextLvScreen);
+                                }
+                            }, 900);
                 }
                 break;
             case 2:
@@ -178,6 +245,22 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
+                                //Animation of character
+                                RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                                char_anim.setInterpolator(new LinearInterpolator());
+                                char_anim.setRepeatCount(0);
+                                char_anim.setDuration(700);
+                                character.startAnimation(char_anim);
+                                mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                                mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                                startActivity(nextLvScreen);
+                                            }
+                                        }, 900);
                             }
                         }
                     });
@@ -195,6 +278,22 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
+                                //Animation of character
+                                RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                                char_anim.setInterpolator(new LinearInterpolator());
+                                char_anim.setRepeatCount(0);
+                                char_anim.setDuration(700);
+                                character.startAnimation(char_anim);
+                                mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                                mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                                startActivity(nextLvScreen);
+                                            }
+                                        }, 900);
                             }
                         }
                     });
@@ -212,6 +311,22 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
+                                //Animation of character
+                                RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                                char_anim.setInterpolator(new LinearInterpolator());
+                                char_anim.setRepeatCount(0);
+                                char_anim.setDuration(700);
+                                character.startAnimation(char_anim);
+                                mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                                mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                                startActivity(nextLvScreen);
+                                            }
+                                        }, 900);
                             }
                         }
                     });
@@ -222,6 +337,22 @@ public class LevelVegetables extends Activity {
                 }
                 else if (tomateYa && cuenta_frutas == 9){
                     System.out.println("Felicidades");
+                    //Animation of character
+                    RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                    char_anim.setInterpolator(new LinearInterpolator());
+                    char_anim.setRepeatCount(0);
+                    char_anim.setDuration(700);
+                    character.startAnimation(char_anim);
+                    mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                    mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                    new java.util.Timer().schedule(
+                            new java.util.TimerTask() {
+                                @Override
+                                public void run() {
+                                    Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                    startActivity(nextLvScreen);
+                                }
+                            }, 900);
                 }
                 break;
             case 3:
@@ -245,6 +376,22 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
+                                //Animation of character
+                                RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                                char_anim.setInterpolator(new LinearInterpolator());
+                                char_anim.setRepeatCount(0);
+                                char_anim.setDuration(700);
+                                character.startAnimation(char_anim);
+                                mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                                mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                                startActivity(nextLvScreen);
+                                            }
+                                        }, 900);
                             }
                         }
                     });
@@ -262,6 +409,22 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
+                                //Animation of character
+                                RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                                char_anim.setInterpolator(new LinearInterpolator());
+                                char_anim.setRepeatCount(0);
+                                char_anim.setDuration(700);
+                                character.startAnimation(char_anim);
+                                mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                                mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                                startActivity(nextLvScreen);
+                                            }
+                                        }, 900);
                             }
                         }
                     });
@@ -280,6 +443,22 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
+                                //Animation of character
+                                RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                                char_anim.setInterpolator(new LinearInterpolator());
+                                char_anim.setRepeatCount(0);
+                                char_anim.setDuration(700);
+                                character.startAnimation(char_anim);
+                                mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                                mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                                startActivity(nextLvScreen);
+                                            }
+                                        }, 900);
                             }
                         }
                     });
@@ -288,6 +467,23 @@ public class LevelVegetables extends Activity {
                     generaFrutas();
                 } else if (tomateYa && cuenta_frutas == 9){
                     System.out.println("Felicidades");
+                    //Animation of character
+                    RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
+                    char_anim.setInterpolator(new LinearInterpolator());
+                    char_anim.setRepeatCount(0);
+                    char_anim.setDuration(700);
+                    character.startAnimation(char_anim);
+                    mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
+                    mApp.getStatutLevels().statut_levels.put(Levels.TREE,-1);
+                    new java.util.Timer().schedule(
+                            new java.util.TimerTask() {
+                                @Override
+                                public void run() {
+                                    Intent nextLvScreen = new Intent(LevelVegetables.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                    startActivity(nextLvScreen);
+                                }
+                            }, 900);
+
                 }
                 break;
         }

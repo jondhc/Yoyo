@@ -46,7 +46,8 @@ public class LevelSelectionActivity extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mApp = ((GlobalApplication) getApplicationContext());
         selectedC = mApp.getGlobalVarValue();
-        mApp.setStatutLevels(statut_levels);
+        if(mApp.getStatutLevels() == null)
+            mApp.setStatutLevels(statut_levels);
         mApp.getStatutLevels().loadData(this, selectedC, mApp.getUser());
 
 
@@ -179,8 +180,8 @@ public class LevelSelectionActivity extends AppCompatActivity {
         if (mApp.getStatutLevels().statut_levels.get(Levels.TREE) == -1) {
             // Glowing
             ImageView view_lvtree_glow = (ImageView) findViewById(R.id.lvtreeglow);
-            view_lvtree_glow.setX((float) (bck_width * 0.62));
-            view_lvtree_glow.setY((float) (bck_height * 0.58));
+            view_lvtree_glow.setX((float) (bck_width * 0.57));
+            view_lvtree_glow.setY((float) (bck_height * 0.56));
             GlideApp.with(this).load(R.drawable.lvl_tree_glow).override(width, height).into(view_lvtree_glow);
         }
         GlideApp.with(this).load(R.drawable.lvl_tree).override(width, height).into(view_lvtree);
