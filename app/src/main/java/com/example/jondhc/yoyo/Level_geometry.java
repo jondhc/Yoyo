@@ -127,12 +127,6 @@ public class Level_geometry extends AppCompatActivity {
         public void run() {
             MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
             winning.start();    //Play audio
-            //Animation of character
-            RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
-            char_anim.setInterpolator(new LinearInterpolator());
-            char_anim.setRepeatCount(0);
-            char_anim.setDuration(700);
-            character.startAnimation(char_anim);
             mApp.getStatutLevels().statut_levels.put(Levels.BRIDGE,3);
             mApp.getStatutLevels().statut_levels.put(Levels.LILY,-1);
             new java.util.Timer().schedule(

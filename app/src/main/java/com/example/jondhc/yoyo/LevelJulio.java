@@ -1,12 +1,15 @@
 package com.example.jondhc.yoyo;
 
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
 
@@ -108,8 +111,19 @@ public class LevelJulio extends AppCompatActivity {
                                                         MediaPlayer mpName = MediaPlayer.create(getApplicationContext(), R.raw.seis);    //set the audio to selected audio
                                                         mpName.start();
                                                         View ImageButton6 = (View) findViewById(R.id.imageButton6);
+                                                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
+                                                        winning.start();
                                                         ImageButton6.setVisibility(View.INVISIBLE);
-
+                                                        mApp.getStatutLevels().statut_levels.put(Levels.LILY,3);
+                                                        mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,-1);
+                                                        new java.util.Timer().schedule(
+                                                                new java.util.TimerTask() {
+                                                                    @Override
+                                                                    public void run() {
+                                                                        Intent nextLvScreen = new Intent(LevelJulio.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                                                        startActivity(nextLvScreen);
+                                                                    }
+                                                                }, 900);
                                                     }
                                                 });
                                             }
