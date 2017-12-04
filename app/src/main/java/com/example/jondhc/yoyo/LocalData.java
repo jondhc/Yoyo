@@ -2,6 +2,9 @@ package com.example.jondhc.yoyo;
 
 import android.app.Activity;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -25,6 +28,8 @@ public class LocalData implements Serializable {
     public Map<Levels, Integer> statut_levels_cat = Collections.synchronizedMap(new EnumMap<Levels, Integer>(Levels.class));
     public Map<Levels, Integer> statut_levels_dog = Collections.synchronizedMap(new EnumMap<Levels, Integer>(Levels.class));
     public Date current_time = new Date(0);
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+
 
 
     public LocalData(){
@@ -57,6 +62,13 @@ public class LocalData implements Serializable {
             out.close();
         } catch (Exception e) {e.printStackTrace();}
 
+        //Access to database
+        DatabaseReference slcFirebase = database.getReference("statut_levels_cat");
+        slcFirebase.setValue(this.statut_levels_cat.toString());
+        DatabaseReference sldFirebase = database.getReference("statut_levels_dog");
+        sldFirebase.setValue(this.statut_levels_dog.toString());
+        DatabaseReference ctFirebase = database.getReference("current_time");
+        ctFirebase.setValue(this.current_time.toString());
 
     }
 
