@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/redphone"
+    tools:context="com.example.jondhc.yoyo.Level_phone">
+
+    <ImageView
+        android:id="@+id/cat_num"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/cat" />
+
+
+    <ImageView
+        android:id="@+id/num0_num"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/num8_num"
+        android:src="@drawable/num0" />
+
+    <ImageView
+        android:id="@+id/num1_num"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/num1" />
+    <ImageView
+        android:id="@+id/num2_num"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/num2" />
+    <ImageView
+        android:id="@+id/num3_num"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/num3" />
+    <ImageView
+        android:id="@+id/num4_num"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/num1_num"
+        android:src="@drawable/num4" />
+    <ImageView
+        android:id="@+id/num5_num"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/num2_num"
+        android:src="@drawable/num5" />
+    <ImageView
+        android:id="@+id/num6_num"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/num3_num"
+        android:src="@drawable/num6" />
+    <ImageView
+        android:id="@+id/num7_num"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/num4_num"
+        android:src="@drawable/num7" />
+    <ImageView
+        android:id="@+id/num8_num"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/num5_num"
+        android:src="@drawable/num8" />
+    <ImageView
+        android:id="@+id/num9_num"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/num6_num"
+        android:src="@drawable/num9" />
+
+
+
+
+
+</RelativeLayout>
+

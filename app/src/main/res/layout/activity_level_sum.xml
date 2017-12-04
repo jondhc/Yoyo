@@ -35,14 +35,14 @@
         android:layout_alignParentStart="true" />
 
     <ImageView
-        android:id="@+id/suma_sky"
+        android:id="@+id/igual_sky"
         android:layout_width="@dimen/tamano_globo"
         android:layout_height="@dimen/tamano_globo"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/suma_sky"
-        android:layout_marginTop="130dp"
-        android:layout_marginStart="128dp" />
+        app:srcCompat="@drawable/igual_sky"
+        android:layout_marginTop="250dp"
+        android:layout_centerHorizontal="true" />
 
 
 
@@ -54,7 +54,8 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/airballoon"
         android:layout_marginTop="40dp"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/airballon2_sky"
@@ -64,7 +65,8 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/airballoon"
         android:layout_marginTop="40dp"
-        android:layout_marginStart="125dp" />
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/airballon3_sky"
@@ -74,7 +76,8 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/airballoon"
         android:layout_marginTop="40dp"
-        android:layout_marginStart="250dp" />
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/airballon4_sky"
@@ -83,8 +86,9 @@
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/airballoon"
-        android:layout_marginTop="230dp"
-        android:layout_marginStart="250dp" />
+        android:layout_marginTop="150dp"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/airballon5_sky"
@@ -93,8 +97,9 @@
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/airballoon"
-        android:layout_marginTop="230dp"
-        android:layout_marginStart="125dp" />
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/airballon6_sky"
@@ -103,18 +108,209 @@
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/airballoon"
-        android:layout_marginTop="230dp" />
+        android:layout_marginTop="150dp"
+        android:visibility="invisible"/>
 
 
     <ImageView
-        android:id="@+id/chat1_sky"
-        android:layout_width="130dp"
-        android:layout_height="150dp"
+        android:id="@+id/num1caso1_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/main_screen_image_description"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/chat1"
+        app:srcCompat="@drawable/num1"
         android:layout_marginTop="400dp"
-        android:layout_marginStart="120dp" />
+        android:layout_marginStart="120dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num2caso1_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num2"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="200dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num6caso1_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num6"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="280dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num4caso2_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num4"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="120dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num2caso2_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num2"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="200dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num3caso2_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num3"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="280dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/num4caso3_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num4"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="120dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num2caso3_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num2"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="200dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num5caso3_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num5"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="280dp"
+         android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num1caso4_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num1"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="120dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num3caso4_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num3"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="200dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num4caso4_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num4"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="280dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/num1caso5_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num1"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="120dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num2caso5_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num2"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="200dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num5caso5_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num5"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="280dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/num6caso6_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num6"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="120dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num2caso6_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num2"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="200dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/num1caso6_sky"
+        android:layout_width="85dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/main_screen_image_description"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/num1"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="280dp"
+        android:visibility="invisible" />
+
+
 
 </RelativeLayout>
 
