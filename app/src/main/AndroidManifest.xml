@@ -24,6 +24,7 @@
         <activity android:name=".Level1Activity" />
         <activity android:name=".LevelVegetables" />
         <activity android:name=".LevelSum" />
+        <activity android:name=".LevelColores"></activity>
     </application>
 
 </manifest>

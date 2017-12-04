@@ -29,8 +29,8 @@
         android:layout_height="130dp"
         android:src="@drawable/chat1"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="85dp"
-        android:layout_alignBottom="@+id/cat"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="430dp"
         android:id="@+id/pensando" />
 
     <ImageView
@@ -38,7 +38,7 @@
         android:layout_height="130dp"
         android:src="@drawable/circle"
         android:id="@+id/circulo"
-        android:layout_alignBottom="@+id/cat"
+        android:layout_marginTop="430dp"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -51,6 +51,7 @@
         android:id="@+id/tecst"
         android:layout_alignStart="@id/circulo"
         android:layout_alignBottom="@id/circulo"
+        android:layout_marginTop="400dp"
         android:layout_marginLeft="28dp"/>
 
     <ImageView
@@ -138,10 +139,8 @@
         android:layout_height="100dp"
         android:src="@drawable/tomato"
         android:id="@+id/tomato4"
-        android:layout_marginLeft="110dp"
-        android:layout_alignParentStart="@id/pensando"
-        android:layout_alignBottom="@id/pensando"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="440dp"
         android:visibility="invisible"/>
 
     <ImageView
@@ -149,10 +148,8 @@
         android:layout_height="100dp"
         android:src="@drawable/potato"
         android:id="@+id/potato4"
-        android:layout_marginLeft="110dp"
-        android:layout_alignParentStart="@id/pensando"
-        android:layout_alignBottom="@id/pensando"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="440dp"
         android:visibility="invisible"/>
 
     <ImageView
@@ -160,10 +157,8 @@
         android:layout_height="100dp"
         android:src="@drawable/salad"
         android:id="@+id/lechuga4"
-        android:layout_marginLeft="110dp"
-        android:layout_alignParentStart="@id/pensando"
-        android:layout_alignBottom="@id/pensando"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="440dp"
         android:visibility="invisible"/>
 
 </RelativeLayout>
