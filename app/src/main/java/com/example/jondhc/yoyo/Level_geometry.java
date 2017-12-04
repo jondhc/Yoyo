@@ -61,7 +61,7 @@ public class Level_geometry extends AppCompatActivity {
                 contador ++;
                 if (contador == 4){
                     Timer timer = new Timer();  //Timer for Winning audio to run
-                    timer.schedule(new ganaste(), 1000);    //Setting delay for audio
+                    timer.schedule(new ganaste(), 500);    //Setting delay for audio
                 }
 
 
@@ -79,7 +79,7 @@ public class Level_geometry extends AppCompatActivity {
                 contador ++;
                 if (contador == 4){
                     Timer timer = new Timer();  //Timer for Winning audio to run
-                    timer.schedule(new ganaste(), 1000);    //Setting delay for audio
+                    timer.schedule(new ganaste(), 500);    //Setting delay for audio
                 }
                 //v.setVisibility(View.INVISIBLE);
 
@@ -95,7 +95,7 @@ public class Level_geometry extends AppCompatActivity {
                 contador ++;
                 if (contador == 4){
                     Timer timer = new Timer();  //Timer for Winning audio to run
-                    timer.schedule(new ganaste(), 1000);    //Setting delay for audio
+                    timer.schedule(new ganaste(), 500);    //Setting delay for audio
                 }
                 //v.setVisibility(View.INVISIBLE);
 
@@ -111,7 +111,7 @@ public class Level_geometry extends AppCompatActivity {
                 contador ++;
                 if (contador == 4){
                     Timer timer = new Timer();  //Timer for Winning audio to run
-                    timer.schedule(new ganaste(), 1000);    //Setting delay for audio
+                    timer.schedule(new ganaste(), 500);    //Setting delay for audio
                 }
                 //v.setVisibility(View.INVISIBLE);
 
