@@ -6,4 +6,8 @@
     <color name="backgroundColor">#7A94FF</color>
     <color name="Background2">#FFD55C</color>
     <color name="iconColor2">#673ab7</color>
+    <color name="MoradoFuerte">#8A2BE2</color>
+    <color name="AzulBrillo">#00BFFF</color>
+    <color name="Coral">#ff9966</color>
+    <color name="verde">#228b22</color>
 </resources>
