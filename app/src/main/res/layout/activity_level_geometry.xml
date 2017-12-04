@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/geometrycolor"
+    tools:context="com.example.jondhc.yoyo.Level_geometry">
+
+    <ImageView
+        android:id="@+id/cat_num"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/cat" />
+
+
+
+    <ImageView
+        android:id="@+id/triangulo_geo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/triangulo" />
+    <ImageView
+        android:id="@+id/circulo_geo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/circulo" />
+    <ImageView
+        android:id="@+id/rectangulo_geo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/circulo_geo"
+        android:src="@drawable/rectangulo" />
+    <ImageView
+        android:id="@+id/cuadrado_geo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/triangulo_geo"
+        android:src="@drawable/cuadrado" />
+
+
+</RelativeLayout>

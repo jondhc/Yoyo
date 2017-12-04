@@ -103,6 +103,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
@@ -111,6 +113,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
@@ -138,6 +142,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
@@ -157,6 +163,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
@@ -191,6 +199,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
@@ -210,6 +220,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
@@ -263,6 +275,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
@@ -271,6 +285,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
@@ -321,6 +337,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
@@ -329,6 +347,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
@@ -409,6 +429,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
@@ -417,6 +439,8 @@ public class LevelSum extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.retry);   //set audio to user-won audio
+                        winning.start();
 
                     }
                 });
