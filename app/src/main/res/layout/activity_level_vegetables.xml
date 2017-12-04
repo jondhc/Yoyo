@@ -7,22 +7,16 @@
     tools:context="com.example.jondhc.yoyo.LevelVegetables">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:id="@+id/cat"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="5dp" />
+        android:id="@+id/catV"
+        android:layout_width="117dp"
+        android:layout_height="117dp"
+        android:layout_alignParentBottom="true"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:id="@+id/dog"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="5dp" />
+        android:id="@+id/dogV"
+        android:layout_width="117dp"
+        android:layout_height="117dp"
+        android:layout_alignParentBottom="true"/>
 
     <ImageView
         android:layout_width="130dp"

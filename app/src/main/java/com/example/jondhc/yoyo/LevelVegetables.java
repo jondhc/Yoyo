@@ -50,11 +50,11 @@ public class LevelVegetables extends Activity {
             actionBar.hide();   // Hide ActionBar
 
         if (selectedC == Characters.CAT) {
-            character = findViewById(R.id.cat);    //Getting cat image
+            character = findViewById(R.id.catV);    //Getting cat image
             GlideApp.with(this).load(R.drawable.cat).into(character);
 
         } else if (selectedC == Characters.DOG) {
-            character = findViewById(R.id.dog);    //Getting dog image
+            character = findViewById(R.id.dogV);    //Getting dog image
             GlideApp.with(this).load(R.drawable.dog).into(character);
         }
 
