@@ -11,6 +11,7 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Collections;
+import java.util.Date;
 import java.util.EnumMap;
 import java.util.Map;
 
@@ -23,6 +24,7 @@ public class LocalData implements Serializable {
     public Map<Levels, Integer> statut_levels = Collections.synchronizedMap(new EnumMap<Levels, Integer>(Levels.class));
     public Map<Levels, Integer> statut_levels_cat = Collections.synchronizedMap(new EnumMap<Levels, Integer>(Levels.class));
     public Map<Levels, Integer> statut_levels_dog = Collections.synchronizedMap(new EnumMap<Levels, Integer>(Levels.class));
+    public Date current_time = new Date(0);
 
 
     public LocalData(){
@@ -46,6 +48,7 @@ public class LocalData implements Serializable {
         if(mFolder == null){
             mFolder = pContext.getExternalFilesDir(null);
         }
+        current_time.getTime();
         ObjectOutput out;
         try {
             File outFile = new File(mFolder, "yoyoSavedData.data");
@@ -53,6 +56,8 @@ public class LocalData implements Serializable {
             out.writeObject(this);
             out.close();
         } catch (Exception e) {e.printStackTrace();}
+
+
     }
 
     public void loadData(Activity pContext, Characters selectedC){
