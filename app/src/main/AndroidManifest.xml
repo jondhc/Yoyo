@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LevelSelectionActivity" />
+        <activity android:name=".LevelJulio" />
+        <activity android:name=".Next_Level_Screen"></activity>
         <activity android:name=".Level1Activity" />
         <activity android:name=".LevelVegetables" />
         <activity android:name=".LevelSum" />

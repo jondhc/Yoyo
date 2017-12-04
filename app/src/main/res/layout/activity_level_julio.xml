@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoniveljulio"
+    tools:context="com.example.jondhc.yoyo.LevelJulio">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/burbuja"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="3"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/verde"
+        />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="45dp"
+        android:background="@drawable/burbuja"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="2"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/AzulBrillo"
+        />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="150dp"
+        android:background="@drawable/burbuja"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="5"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="260dp"
+        android:background="@drawable/burbuja"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="6"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="240dp"
+        android:background="@drawable/burbuja"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="1"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/MoradoFuerte"
+        />
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="140dp"
+        android:background="@drawable/burbuja"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="4"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/Coral"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewd2"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/imageViewg1"
+        android:scaleType="fitXY"
+        android:background="@drawable/chat2"
+        android:textColor="@color/MoradoFuerte"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        android:text="1"
+        android:src="@drawable/burbuja"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:id="@+id/imageViewg1"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/buzogato"
+
+        />
+
+
+
+</RelativeLayout>
