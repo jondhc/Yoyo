@@ -49,8 +49,8 @@ public class LevelSelectionActivity extends AppCompatActivity {
         if(mApp.getStatutLevels() == null)
             mApp.setStatutLevels(statut_levels);
         mApp.getStatutLevels().loadData(this, selectedC, mApp.getUser());
-
-
+        mApp.getStatutLevels().statut_levels.put(Levels.BRIDGE,-1);
+        mApp.getStatutLevels().statut_levels.put(Levels.VEGETABLES,3);
         int width, height, bck_width, bck_height;
         setContentView(R.layout.activity_level_selection);
 
@@ -197,7 +197,7 @@ public class LevelSelectionActivity extends AppCompatActivity {
             view_lvbridge.setOnClickListener(new View.OnClickListener() { //Detect touch on button
                 @Override
                 public void onClick(View v) {
-                    Intent playI = new Intent(LevelSelectionActivity.this, LevelVegetables.class); //Start next activity
+                    Intent playI = new Intent(LevelSelectionActivity.this, Level_geometry.class); //Start next activity
                     startActivity(playI);
                 }
             });
@@ -366,6 +366,18 @@ public class LevelSelectionActivity extends AppCompatActivity {
                 finish();
             }
         });*/
+        // We finished
+        if (mApp.getStatutLevels().statut_levels.get(Levels.GLOBO) > 0) {
+            // Draw character
+            view_character.setX((float) (bck_width * 0.47));
+            view_character.setY((float) (bck_height * 0.92));
+            width = (int) (0.2 * bck_width);
+            height = width;
+            if (selectedC == Characters.CAT)
+                GlideApp.with(this).load(R.drawable.cat).override(width, height).into(view_character);
+            else if (selectedC == Characters.DOG)
+                GlideApp.with(this).load(R.drawable.dog).override(width, height).into(view_character);
+        }
         mApp.getStatutLevels().saveData(this, selectedC, mApp.getUser());
         scrollToCharDelay();
     }

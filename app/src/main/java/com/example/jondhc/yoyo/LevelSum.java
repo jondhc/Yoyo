@@ -1,5 +1,6 @@
 package com.example.jondhc.yoyo;
 
+import android.content.Intent;
 import android.media.Image;
 import android.media.MediaPlayer;
 import android.provider.ContactsContract;
@@ -97,6 +98,15 @@ public class LevelSum extends AppCompatActivity {
                         System.out.println("se selecciono el correcto");
                         MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
                         winning.start();
+                        mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
+                        new java.util.Timer().schedule(
+                                new java.util.TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        Intent nextLvScreen = new Intent(LevelSum.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                        startActivity(nextLvScreen);
+                                    }
+                                }, 900);
 
                     }
                 });
@@ -157,6 +167,15 @@ public class LevelSum extends AppCompatActivity {
                         System.out.println("se selecciono el correcto");
                         MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
                         winning.start();
+                        mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
+                        new java.util.Timer().schedule(
+                                new java.util.TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        Intent nextLvScreen = new Intent(LevelSum.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                        startActivity(nextLvScreen);
+                                    }
+                                }, 900);
 
                     }
                 });
@@ -214,6 +233,15 @@ public class LevelSum extends AppCompatActivity {
                         System.out.println("se selecciono el correcto");
                         MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
                         winning.start();
+                        mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
+                        new java.util.Timer().schedule(
+                                new java.util.TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        Intent nextLvScreen = new Intent(LevelSum.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                        startActivity(nextLvScreen);
+                                    }
+                                }, 900);
 
                     }
                 });
@@ -269,6 +297,15 @@ public class LevelSum extends AppCompatActivity {
                         System.out.println("se selecciono el correcto");
                         MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
                         winning.start();
+                        mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
+                        new java.util.Timer().schedule(
+                                new java.util.TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        Intent nextLvScreen = new Intent(LevelSum.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                        startActivity(nextLvScreen);
+                                    }
+                                }, 900);
 
                     }
                 });
@@ -362,6 +399,15 @@ public class LevelSum extends AppCompatActivity {
                         System.out.println("se selecciono el correcto");
                         MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
                         winning.start();
+                        mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
+                        new java.util.Timer().schedule(
+                                new java.util.TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        Intent nextLvScreen = new Intent(LevelSum.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                        startActivity(nextLvScreen);
+                                    }
+                                }, 900);
 
                     }
                 });
@@ -423,6 +469,15 @@ public class LevelSum extends AppCompatActivity {
                         System.out.println("se selecciono el correcto");
                         MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
                         winning.start();
+                        mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
+                        new java.util.Timer().schedule(
+                                new java.util.TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        Intent nextLvScreen = new Intent(LevelSum.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                        startActivity(nextLvScreen);
+                                    }
+                                }, 900);
 
                     }
                 });
