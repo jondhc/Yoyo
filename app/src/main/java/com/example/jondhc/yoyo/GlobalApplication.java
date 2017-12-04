@@ -12,6 +12,7 @@ public class GlobalApplication extends Application {
 
     private Characters selectedC;
     private FirebaseUser user;
+    private LocalData statut_levels;
 
     public Characters getGlobalVarValue() {
         return selectedC;
@@ -21,6 +22,10 @@ public class GlobalApplication extends Application {
         selectedC = toSet;
     }
 
+    public void setStatutLevels(LocalData statut_levels){
+        this.statut_levels = statut_levels;
+    }
+
     public FirebaseUser getUser() {
         return user;
     }
@@ -28,4 +33,10 @@ public class GlobalApplication extends Application {
     public void setUser(FirebaseUser toSet) {
         user = toSet;
     }
+
+    public LocalData getStatutLevels(){
+        return this.statut_levels;
+    }
+
+
 }

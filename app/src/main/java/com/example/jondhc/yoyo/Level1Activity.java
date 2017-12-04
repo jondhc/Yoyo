@@ -1,6 +1,7 @@
 package com.example.jondhc.yoyo;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -276,6 +277,17 @@ public class Level1Activity extends AppCompatActivity {
                         char_anim.setRepeatCount(0);
                         char_anim.setDuration(700);
                         character.startAnimation(char_anim);
+                        mApp.getStatutLevels().statut_levels.put(Levels.TREE,3);
+                        mApp.getStatutLevels().statut_levels.put(Levels.BRIDGE,-1);
+                        new java.util.Timer().schedule(
+                                new java.util.TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        Intent nextLvScreen = new Intent(Level1Activity.this, Next_Level_Screen.class); //Start next activity, change with correct level
+                                        startActivity(nextLvScreen);
+                                    }
+                                }, 900);
+
                         //ends Animation of character
                     }//end if
                     return true;
