@@ -31,15 +31,14 @@ public class Level1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_level1);
-        mApp = ((GlobalApplication)getApplicationContext());
+        mApp = ((GlobalApplication) getApplicationContext());
         selectedC = mApp.getGlobalVarValue();
 
-        if(selectedC == Characters.CAT) {
-            character = (ImageView)findViewById(R.id.cat_catch);    //Getting cat image
+        if (selectedC == Characters.CAT) {
+            character = (ImageView) findViewById(R.id.cat_catch);    //Getting cat image
             GlideApp.with(this).load(R.drawable.cat).into(character);
-        }
-        else if(selectedC == Characters.DOG) {
-            character = (ImageView)findViewById(R.id.dog_catch);    //Getting dog image
+        } else if (selectedC == Characters.DOG) {
+            character = (ImageView) findViewById(R.id.dog_catch);    //Getting dog image
             GlideApp.with(this).load(R.drawable.dog).into(character);
         }
 

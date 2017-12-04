@@ -6,8 +6,8 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Display;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -36,19 +36,17 @@ public class MainActivity extends AppCompatActivity {
     Button playBtnCat; //Initializing Cat Play Button
     Button playBtnDog; //Initializing Dog Play Button
     GlobalApplication mApp;
-    private GoogleSignInClient mGoogleSignInClient;
-    private FirebaseAuth mAuth;
     FirebaseDatabase database;
     DatabaseReference myRef;
     FirebaseUser user;
-
-
+    private GoogleSignInClient mGoogleSignInClient;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        mApp = ((GlobalApplication)getApplicationContext());
+        mApp = ((GlobalApplication) getApplicationContext());
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN; //Hide the status bar
         decorView.setSystemUiVisibility(uiOptions);
@@ -93,20 +91,18 @@ public class MainActivity extends AppCompatActivity {
         textYoyo.setY((float) (bck_height * 0.1));
         width = (int) (1 * bck_width);
         height = (int) (width / 1.777778);
-        GlideApp.with(this).load(R.drawable.yoyo).override(width,height).into(textYoyo);
+        GlideApp.with(this).load(R.drawable.yoyo).override(width, height).into(textYoyo);
 
         ImageView iconCat = (ImageView) findViewById(R.id.iconCat);
         iconCat.setX((float) (bck_width * 0.16));
         iconCat.setY((float) (bck_height * 0.39));
         width = (int) (0.25 * bck_width);
         height = width;
-        GlideApp.with(this).load(R.drawable.cat).override(width,height).into(iconCat);
+        GlideApp.with(this).load(R.drawable.cat).override(width, height).into(iconCat);
         iconCat.setOnClickListener(new View.OnClickListener() { //Detect touch on button
             @Override
             public void onClick(View v) {
                 mApp.setGlobalVarValue(Characters.CAT);
-                myRef = database.getReference(user.getUid()+" Character ");
-                myRef.setValue("Cat was selected");
                 Intent playI = new Intent(MainActivity.this, LevelSelectionActivity.class); //Start next activity
                 startActivity(playI);
             }
@@ -117,13 +113,11 @@ public class MainActivity extends AppCompatActivity {
         iconDog.setY((float) (bck_height * 0.4));
         width = (int) (0.25 * bck_width);
         height = width;
-        GlideApp.with(this).load(R.drawable.dog).override(width,height).into(iconDog);
+        GlideApp.with(this).load(R.drawable.dog).override(width, height).into(iconDog);
         iconDog.setOnClickListener(new View.OnClickListener() { //Detect touch on button
             @Override
             public void onClick(View v) {
                 mApp.setGlobalVarValue(Characters.DOG);
-                myRef = database.getReference(user.getUid()+" Character ");
-                myRef.setValue("Dog was selected");
                 Intent playI = new Intent(MainActivity.this, LevelSelectionActivity.class); //Start next activity
                 startActivity(playI);
             }
@@ -134,13 +128,11 @@ public class MainActivity extends AppCompatActivity {
         playBtnCat.setY((float) (bck_height * 0.47));
         width = (int) (0.55 * bck_width);
         height = width;
-        GlideApp.with(this).load(R.drawable.play).override(width,height).into(playBtnCat);
+        GlideApp.with(this).load(R.drawable.play).override(width, height).into(playBtnCat);
         playBtnCat.setOnClickListener(new View.OnClickListener() { //Detect touch on button
             @Override
             public void onClick(View v) {
                 mApp.setGlobalVarValue(Characters.CAT);
-                myRef = database.getReference(user.getUid()+" Character ");
-                myRef.setValue("Cat was selected");
                 Intent playI = new Intent(MainActivity.this, LevelSelectionActivity.class); //Start next activity
                 startActivity(playI);
             }
@@ -151,13 +143,11 @@ public class MainActivity extends AppCompatActivity {
         playBtnDog.setY((float) (bck_height * 0.47));
         width = (int) (0.55 * bck_width);
         height = width;
-        GlideApp.with(this).load(R.drawable.play).override(width,height).into(playBtnDog);
+        GlideApp.with(this).load(R.drawable.play).override(width, height).into(playBtnDog);
         playBtnDog.setOnClickListener(new View.OnClickListener() { //Detect touch on button
             @Override
             public void onClick(View v) {
                 mApp.setGlobalVarValue(Characters.DOG);
-                myRef = database.getReference(user.getUid()+" Character ");
-                myRef.setValue("Dog was selected");
                 Intent playI = new Intent(MainActivity.this, LevelSelectionActivity.class); //Start next activity
                 startActivity(playI);
             }
