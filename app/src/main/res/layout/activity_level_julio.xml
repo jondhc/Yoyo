@@ -93,23 +93,18 @@
 
     <ImageView
         android:id="@+id/imageViewd2"
-        android:layout_width="150dp"
-        android:layout_height="110dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:layout_toEndOf="@+id/imageViewg1"
-        android:scaleType="fitXY"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="160dp"
         android:background="@drawable/chat2"
-        android:textColor="@color/MoradoFuerte"
-        android:textSize="70sp"
-        android:textStyle="bold"
-        android:text="1"
-        android:src="@drawable/burbuja"
-        android:textAlignment="center"/>
 
-    <ImageView
-        android:id="@+id/imageViewg1"
-        android:layout_width="120dp"
+    />
+
+
+    <TextView
+        android:id="@+id/imageButton6"
+        android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
@@ -122,7 +117,84 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginStart="30dp" />
-
-
+        
+    <TextView
+        android:id="@+id/imageButton6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="457dp"
+        android:layout_marginLeft="185dp"
+        android:background="@drawable/burbuja"
+        android:text="6"
+        android:textAlignment="center"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        />
+    <TextView
+        android:id="@+id/imageButton5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="457dp"
+        android:layout_marginLeft="185dp"
+        android:background="@drawable/burbuja"
+        android:text="5"
+        android:textAlignment="center"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        />
+    <TextView
+        android:id="@+id/imageButton4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="457dp"
+        android:layout_marginLeft="185dp"
+        android:background="@drawable/burbuja"
+        android:text="4"
+        android:textAlignment="center"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/Coral"
+        />
+    <TextView
+        android:id="@+id/imageButton3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="457dp"
+        android:layout_marginLeft="185dp"
+        android:background="@drawable/burbuja"
+        android:text="3"
+        android:textAlignment="center"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/verde"
+        />
+    <TextView
+        android:id="@+id/imageButton2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="457dp"
+        android:layout_marginLeft="185dp"
+        android:background="@drawable/burbuja"
+        android:text="2"
+        android:textAlignment="center"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/AzulBrillo"
+        />
+    <TextView
+        android:id="@+id/imageButton1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="457dp"
+        android:layout_marginLeft="185dp"
+        android:background="@drawable/burbuja"
+        android:text="1"
+        android:textAlignment="center"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textColor="@color/MoradoFuerte"
+        />
 
 </RelativeLayout>
