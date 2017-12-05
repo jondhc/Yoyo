@@ -43,7 +43,7 @@ public class Level_phone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mp0 = MediaPlayer.create(getApplicationContext(), R.raw.circulo);   //set audio to user-won audio
+                MediaPlayer mp0 = MediaPlayer.create(getApplicationContext(), R.raw.cero);   //set audio to user-won audio
                 mp0.start();
                 contador ++;
                 if (contador == 10){
@@ -59,7 +59,7 @@ public class Level_phone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mp1 = MediaPlayer.create(getApplicationContext(), R.raw.one);   //set audio to user-won audio
+                MediaPlayer mp1 = MediaPlayer.create(getApplicationContext(), R.raw.uno);   //set audio to user-won audio
                 mp1.start();
                 contador ++;
                 if (contador == 10){
@@ -75,7 +75,7 @@ public class Level_phone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mp2 = MediaPlayer.create(getApplicationContext(), R.raw.two);   //set audio to user-won audio
+                MediaPlayer mp2 = MediaPlayer.create(getApplicationContext(), R.raw.dos);   //set audio to user-won audio
                 mp2.start();
                 contador ++;
                 if (contador == 10){
@@ -91,7 +91,7 @@ public class Level_phone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.three);   //set audio to user-won audio
+                MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.tres);   //set audio to user-won audio
                 mp3.start();
                 contador ++;
                 if (contador == 10){
@@ -107,7 +107,7 @@ public class Level_phone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mp4 = MediaPlayer.create(getApplicationContext(), R.raw.four);   //set audio to user-won audio
+                MediaPlayer mp4 = MediaPlayer.create(getApplicationContext(), R.raw.cuatro);   //set audio to user-won audio
                 mp4.start();
                 contador ++;
                 if (contador == 10){
@@ -123,7 +123,7 @@ public class Level_phone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mp5 = MediaPlayer.create(getApplicationContext(), R.raw.five);   //set audio to user-won audio
+                MediaPlayer mp5 = MediaPlayer.create(getApplicationContext(), R.raw.cinco);   //set audio to user-won audio
                 mp5.start();
                 contador ++;
                 if (contador == 10){
@@ -139,7 +139,7 @@ public class Level_phone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mp6 = MediaPlayer.create(getApplicationContext(), R.raw.six);   //set audio to user-won audio
+                MediaPlayer mp6 = MediaPlayer.create(getApplicationContext(), R.raw.seis);   //set audio to user-won audio
                 mp6.start();
                 contador ++;
                 if (contador == 10){
@@ -155,7 +155,7 @@ public class Level_phone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mp7 = MediaPlayer.create(getApplicationContext(), R.raw.seven);   //set audio to user-won audio
+                MediaPlayer mp7 = MediaPlayer.create(getApplicationContext(), R.raw.siete);   //set audio to user-won audio
                 mp7.start();
                 contador ++;
                 if (contador == 10){
@@ -171,7 +171,7 @@ public class Level_phone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mp8 = MediaPlayer.create(getApplicationContext(), R.raw.eight);   //set audio to user-won audio
+                MediaPlayer mp8 = MediaPlayer.create(getApplicationContext(), R.raw.ocho);   //set audio to user-won audio
                 mp8.start();
                 contador ++;
                 if (contador == 10){
@@ -186,7 +186,7 @@ public class Level_phone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mp9 = MediaPlayer.create(getApplicationContext(), R.raw.nine);   //set audio to user-won audio
+                MediaPlayer mp9 = MediaPlayer.create(getApplicationContext(), R.raw.nueve);   //set audio to user-won audio
                 mp9.start();
                 contador ++;
                 if (contador == 10){
@@ -201,7 +201,7 @@ public class Level_phone extends AppCompatActivity {
 
     class ganaste2 extends TimerTask {   //Runnable for congratulations action to be delayed
         public void run() {
-            MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
+            MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.hooray);   //set audio to user-won audio
             winning.start();    //Play audio
         }
     }

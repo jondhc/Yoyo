@@ -175,7 +175,7 @@ public class Level1Activity extends AppCompatActivity {
 
     class userWon extends TimerTask {   //Runnable for congratulations action to be delayed
         public void run() {
-            MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
+            MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.hooray);   //set audio to user-won audio
             winning.start();    //Play audio
         }
     }
@@ -220,47 +220,47 @@ public class Level1Activity extends AppCompatActivity {
                     int audio = 0;
                     switch (basket_counter) {   //For every counted fruit, select the according audio
                         case 1:
-                            audio = R.raw.one;
+                            audio = R.raw.uno;
                             basket_berry = findViewById(R.id.berry_basket_1);
                             basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 2:
-                            audio = R.raw.two;
+                            audio = R.raw.dos;
                             basket_berry = findViewById(R.id.berry_basket_2);
                             basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 3:
-                            audio = R.raw.three;
+                            audio = R.raw.tres;
                             basket_berry = findViewById(R.id.berry_basket_3);
                             basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 4:
-                            audio = R.raw.four;
+                            audio = R.raw.cuatro;
                             basket_berry = findViewById(R.id.berry_basket_4);
                             basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 5:
-                            audio = R.raw.five;
+                            audio = R.raw.cinco;
                             basket_berry = findViewById(R.id.berry_basket_5);
                             basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 6:
-                            audio = R.raw.six;
+                            audio = R.raw.seis;
                             basket_berry = findViewById(R.id.berry_basket_6);
                             basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 7:
-                            audio = R.raw.seven;
+                            audio = R.raw.siete;
                             basket_berry = findViewById(R.id.berry_basket_7);
                             basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 8:
-                            audio = R.raw.eight;
+                            audio = R.raw.ocho;
                             basket_berry = findViewById(R.id.berry_basket_8);
                             basket_berry.setVisibility(View.VISIBLE);
                             break;
                         case 9:
-                            audio = R.raw.nine;
+                            audio = R.raw.nueve;
                             basket_berry = findViewById(R.id.berry_basket_9);
                             basket_berry.setVisibility(View.VISIBLE);
                             break;

@@ -115,7 +115,7 @@ public class LevelVegetables extends Activity {
                                 lechuga4.setVisibility(View.INVISIBLE);
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
-                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                                 AudioF.start();
 
                                  System.out.println("Felicidades");
@@ -153,7 +153,7 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
-                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                                 AudioF.start();
                                 //Animation of character
                                 RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
@@ -189,7 +189,7 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
-                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                                 AudioF.start();
                                 //Animation of character
                                 RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
@@ -216,7 +216,7 @@ public class LevelVegetables extends Activity {
                 }
                 else if (tomateYa && cuenta_frutas == 9){
                     System.out.println("Felicidades");
-                    MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                    MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                     AudioF.start();
                     //Animation of character
                     RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
@@ -258,7 +258,7 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
-                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                                 AudioF.start();
                                 //Animation of character
                                 RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
@@ -294,7 +294,7 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
-                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                                 AudioF.start();
                                 //Animation of character
                                 RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
@@ -330,7 +330,7 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
-                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                                 AudioF.start();
                                 //Animation of character
                                 RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
@@ -358,7 +358,7 @@ public class LevelVegetables extends Activity {
                 }
                 else if (tomateYa && cuenta_frutas == 9){
                     System.out.println("Felicidades");
-                    MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                    MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                     AudioF.start();
                     //Animation of character
                     RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
@@ -400,7 +400,7 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
-                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                                 AudioF.start();
                                 //Animation of character
                                 RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
@@ -436,7 +436,7 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
-                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                                 AudioF.start();
                                 //Animation of character
                                 RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
@@ -472,7 +472,7 @@ public class LevelVegetables extends Activity {
                             }
                             else if(cuenta_frutas==9 && contadorR == 3){
                                 System.out.println("Felicidades");
-                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                                MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                                 AudioF.start();
                                 //Animation of character
                                 RotateAnimation char_anim = new RotateAnimation(0f, 360f, character.getWidth() / 2, character.getHeight() / 2);
@@ -498,7 +498,7 @@ public class LevelVegetables extends Activity {
                     generaFrutas();
                 } else if (tomateYa && cuenta_frutas == 9){
                     System.out.println("Felicidades");
-                    MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.won);
+                    MediaPlayer AudioF = MediaPlayer.create(getApplicationContext(), R.raw.hooray);
                     AudioF.start();
 
                     //Animation of character
@@ -525,39 +525,39 @@ public class LevelVegetables extends Activity {
     public void playAudio(int contador){
         switch (contador){
             case 1:
-                MediaPlayer num1 = MediaPlayer.create(getApplicationContext(), R.raw.one);
+                MediaPlayer num1 = MediaPlayer.create(getApplicationContext(), R.raw.uno);
                 num1.start();
                 break;
             case 2:
-                MediaPlayer num2 = MediaPlayer.create(getApplicationContext(), R.raw.two);
+                MediaPlayer num2 = MediaPlayer.create(getApplicationContext(), R.raw.dos);
                 num2.start();
                 break;
             case 3:
-                MediaPlayer num3 = MediaPlayer.create(getApplicationContext(), R.raw.three);
+                MediaPlayer num3 = MediaPlayer.create(getApplicationContext(), R.raw.tres);
                 num3.start();
                 break;
             case 4:
-                MediaPlayer num4 = MediaPlayer.create(getApplicationContext(), R.raw.four);
+                MediaPlayer num4 = MediaPlayer.create(getApplicationContext(), R.raw.cuatro);
                 num4.start();
                 break;
             case 5:
-                MediaPlayer num5 = MediaPlayer.create(getApplicationContext(), R.raw.five);
+                MediaPlayer num5 = MediaPlayer.create(getApplicationContext(), R.raw.cinco);
                 num5.start();
                 break;
             case 6:
-                MediaPlayer num6 = MediaPlayer.create(getApplicationContext(), R.raw.six);
+                MediaPlayer num6 = MediaPlayer.create(getApplicationContext(), R.raw.seis);
                 num6.start();
                 break;
             case 7:
-                MediaPlayer num7 = MediaPlayer.create(getApplicationContext(), R.raw.seven);
+                MediaPlayer num7 = MediaPlayer.create(getApplicationContext(), R.raw.siete);
                 num7.start();
                 break;
             case 8:
-                MediaPlayer num8 = MediaPlayer.create(getApplicationContext(), R.raw.eight);
+                MediaPlayer num8 = MediaPlayer.create(getApplicationContext(), R.raw.ocho);
                 num8.start();
                 break;
             case 9:
-                MediaPlayer num9 = MediaPlayer.create(getApplicationContext(), R.raw.nine);
+                MediaPlayer num9 = MediaPlayer.create(getApplicationContext(), R.raw.nueve);
                 num9.start();
         }
     }

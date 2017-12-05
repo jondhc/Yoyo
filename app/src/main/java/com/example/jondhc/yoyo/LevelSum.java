@@ -96,7 +96,7 @@ public class LevelSum extends AppCompatActivity {
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
                         System.out.println("se selecciono el correcto");
-                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.hooray);   //set audio to user-won audio
                         winning.start();
                         mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
                         new java.util.Timer().schedule(
@@ -165,7 +165,7 @@ public class LevelSum extends AppCompatActivity {
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
                         System.out.println("se selecciono el correcto");
-                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.hooray);   //set audio to user-won audio
                         winning.start();
                         mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
                         new java.util.Timer().schedule(
@@ -231,7 +231,7 @@ public class LevelSum extends AppCompatActivity {
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
                         System.out.println("se selecciono el correcto");
-                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.hooray);   //set audio to user-won audio
                         winning.start();
                         mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
                         new java.util.Timer().schedule(
@@ -295,7 +295,7 @@ public class LevelSum extends AppCompatActivity {
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
                         System.out.println("se selecciono el correcto");
-                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.hooray);   //set audio to user-won audio
                         winning.start();
                         mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
                         new java.util.Timer().schedule(
@@ -397,7 +397,7 @@ public class LevelSum extends AppCompatActivity {
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
                         System.out.println("se selecciono el correcto");
-                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.hooray);   //set audio to user-won audio
                         winning.start();
                         mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
                         new java.util.Timer().schedule(
@@ -467,7 +467,7 @@ public class LevelSum extends AppCompatActivity {
                     public void onClick(View v) {
                         v.setVisibility(View.INVISIBLE);
                         System.out.println("se selecciono el correcto");
-                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
+                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.hooray);   //set audio to user-won audio
                         winning.start();
                         mApp.getStatutLevels().statut_levels.put(Levels.GLOBO,3);
                         new java.util.Timer().schedule(

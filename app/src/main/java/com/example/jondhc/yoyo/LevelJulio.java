@@ -111,7 +111,7 @@ public class LevelJulio extends AppCompatActivity {
                                                         MediaPlayer mpName = MediaPlayer.create(getApplicationContext(), R.raw.seis);    //set the audio to selected audio
                                                         mpName.start();
                                                         View ImageButton6 = (View) findViewById(R.id.imageButton6);
-                                                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
+                                                        MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.hooray);   //set audio to user-won audio
                                                         winning.start();
                                                         ImageButton6.setVisibility(View.INVISIBLE);
                                                         mApp.getStatutLevels().statut_levels.put(Levels.LILY,3);

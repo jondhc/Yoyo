@@ -56,7 +56,7 @@ public class Level_geometry extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mpcirculo = MediaPlayer.create(getApplicationContext(), R.raw.circulo);   //set audio to user-won audio
+                MediaPlayer mpcirculo = MediaPlayer.create(getApplicationContext(), R.raw.estecirculo);   //set audio to user-won audio
                 mpcirculo.start();
                 contador ++;
                 if (contador == 4){
@@ -74,7 +74,7 @@ public class Level_geometry extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mpcuadrado = MediaPlayer.create(getApplicationContext(), R.raw.cuadrado);   //set audio to user-won audio
+                MediaPlayer mpcuadrado = MediaPlayer.create(getApplicationContext(), R.raw.estecuadrado);   //set audio to user-won audio
                 mpcuadrado.start();
                 contador ++;
                 if (contador == 4){
@@ -90,7 +90,7 @@ public class Level_geometry extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mptriangulo = MediaPlayer.create(getApplicationContext(), R.raw.triangulo);   //set audio to user-won audio
+                MediaPlayer mptriangulo = MediaPlayer.create(getApplicationContext(), R.raw.estetriangulo);   //set audio to user-won audio
                 mptriangulo.start();
                 contador ++;
                 if (contador == 4){
@@ -106,7 +106,7 @@ public class Level_geometry extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.setVisibility(View.INVISIBLE);
-                MediaPlayer mprectangulo = MediaPlayer.create(getApplicationContext(), R.raw.rectangulo);   //set audio to user-won audio
+                MediaPlayer mprectangulo = MediaPlayer.create(getApplicationContext(), R.raw.esterectangulo);   //set audio to user-won audio
                 mprectangulo.start();
                 contador ++;
                 if (contador == 4){
@@ -125,7 +125,7 @@ public class Level_geometry extends AppCompatActivity {
 
     class ganaste extends TimerTask {   //Runnable for congratulations action to be delayed
         public void run() {
-            MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.won);   //set audio to user-won audio
+            MediaPlayer winning = MediaPlayer.create(getApplicationContext(), R.raw.hooray);   //set audio to user-won audio
             winning.start();    //Play audio
             mApp.getStatutLevels().statut_levels.put(Levels.BRIDGE,3);
             mApp.getStatutLevels().statut_levels.put(Levels.LILY,-1);
