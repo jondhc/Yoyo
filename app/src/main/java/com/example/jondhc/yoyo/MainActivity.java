@@ -3,6 +3,7 @@ package com.example.jondhc.yoyo;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Point;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        MediaPlayer mpName = MediaPlayer.create(getApplicationContext(), R.raw.backgroundmusic);    //set the audio to selected audio
+        mpName.start(); //Start media player
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mApp = ((GlobalApplication) getApplicationContext());
         View decorView = getWindow().getDecorView();

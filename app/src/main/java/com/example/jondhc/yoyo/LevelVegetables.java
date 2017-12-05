@@ -45,7 +45,7 @@ public class LevelVegetables extends Activity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_level_vegetables);
         MediaPlayer AudioIni = MediaPlayer.create(getApplicationContext(), R.raw.instructions_g);
-        AudioIni.start(); //Start media player
+        //AudioIni.start(); //Start media player
         mApp = ((GlobalApplication) getApplicationContext());
         selectedC = mApp.getGlobalVarValue();
 
